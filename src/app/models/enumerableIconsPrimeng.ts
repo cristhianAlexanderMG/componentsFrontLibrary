@@ -3,7 +3,11 @@ export abstract class EnumerableIconsPrimeng {
     table: 'pi pi-table',
     thLarge: 'pi pi-th-large',
     minus: 'pi pi-minus',
-    android: 'pi pi-android'
+    android: 'pi pi-android',
+    circleOn: 'pi pi-circle-on',
+    home: 'pi pi-home'
+
+
 
 
 

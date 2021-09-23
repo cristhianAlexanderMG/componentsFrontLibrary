@@ -1,0 +1,192 @@
+<p-card header="Button Component">
+  <p-accordion [multiple]="true">
+    <p-accordionTab header="Basic">
+      <app-button-primeng
+      [label]="'Basic'"
+      ></app-button-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Disabled">
+      <app-button-primeng
+        [label]="'Disabled'"
+        [disabled]="true"
+      ></app-button-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Size">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <app-button-primeng
+              [label]="'Small'"
+              [size]="enumSize.Small"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="'Normal'"
+              [size]="enumSize.Normal"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="'Large'"
+              [size]="enumSize.Large"
+            ></app-button-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+    <p-accordionTab header="Raised">
+      <app-button-primeng
+        [label]="'Raised'"
+        [raised]="true"
+      ></app-button-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Rounded">
+      <app-button-primeng
+        [label]="'Rounded'"
+        [rounded]="true"
+      ></app-button-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Outlined">
+      <app-button-primeng
+        [label]="'Outlined'"
+        [outlined]="true"
+      ></app-button-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Loading">
+      <app-button-primeng
+        [label]="'Loading'"
+        [loading]="true"
+      ></app-button-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Severity">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Danger"
+              [typeSeverityButton]="enumSeverity.Danger"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="'Primary'"
+              [typeSeverityButton]="enumSeverity.Primary"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Help"
+              [typeSeverityButton]="enumSeverity.Help"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Info"
+              [typeSeverityButton]="enumSeverity.Info"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Secondary"
+              [typeSeverityButton]="enumSeverity.Secondary"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Success"
+              [typeSeverityButton]="enumSeverity.Success"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Warning"
+              [typeSeverityButton]="enumSeverity.Warning"
+            ></app-button-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+    <p-accordionTab header="With Icon">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <app-button-primeng
+              [label]="'Left Icon'"
+              [positionIcon]="enumPosition.Left"
+              [icon]="enumIcon.android"
+            ></app-button-primeng>
+          </div>
+          <div class="col-6">
+            <app-button-primeng
+              [label]="'Right Icon'"
+              [positionIcon]="enumPosition.Right"
+              [icon]="enumIcon.android"
+            ></app-button-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+    <p-accordionTab header="With Badge">
+      <app-button-primeng
+        [label]="'With Badge'"
+        [badge]="'Important'"
+      ></app-button-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Severity Badge">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Danger"
+              [badge]="'Important'"
+              [typeSeverityBadge]="enumSeverity.Danger"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="'Primary'"
+              [badge]="'Important'"
+              [typeSeverityBadge]="enumSeverity.Primary"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Help"
+              [badge]="'Important'"
+              [typeSeverityBadge]="enumSeverity.Help"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Info"
+              [badge]="'Important'"
+              [typeSeverityBadge]="enumSeverity.Info"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Secondary"
+              [badge]="'Important'"
+              [typeSeverityBadge]="enumSeverity.Secondary"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Success"
+              [badge]="'Important'"
+              [typeSeverityBadge]="enumSeverity.Success"
+            ></app-button-primeng>
+          </div>
+          <div class="col-4">
+            <app-button-primeng
+              [label]="enumSeverity.Warning"
+              [badge]="'Important'"
+              [typeSeverityBadge]="enumSeverity.Warning"
+            ></app-button-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+  </p-accordion>
+</p-card>

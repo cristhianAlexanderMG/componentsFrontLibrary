@@ -6,6 +6,7 @@ import {MenubarModule} from "primeng/menubar";
 import {CardModule} from 'primeng/card';
 import {AccordionModule} from 'primeng/accordion';
 import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [],
@@ -15,7 +16,8 @@ import {InputTextModule} from 'primeng/inputtext';
     MenubarModule,
     CardModule,
     AccordionModule,
-    InputTextModule
+    InputTextModule,
+    ButtonModule
   ],
   exports: [
     CommonModule,
@@ -23,7 +25,8 @@ import {InputTextModule} from 'primeng/inputtext';
     MenubarModule,
     CardModule,
     AccordionModule,
-    InputTextModule
+    InputTextModule,
+    ButtonModule
   ]
 })
 export class PrimengModule { }

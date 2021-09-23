@@ -15,17 +15,32 @@ export class MenuComponent {
   }
 
   createItemsMenu(): any[] {
-    return [{
-      label: 'Mini',
-      icon: EnumerableIconsPrimeng.icon.thLarge,
-      items: [{
-        label: 'Input',
-        icon: EnumerableIconsPrimeng.icon.minus,
-        routerLink: 'input',
-      }]
-    }, {
-      label: 'Table',
-      icon: EnumerableIconsPrimeng.icon.table
-    }];
+    return [
+      {
+        label: 'Home',
+        icon: EnumerableIconsPrimeng.icon.home,
+        routerLink: 'home',
+      },
+      {
+        label: 'Components',
+        icon: EnumerableIconsPrimeng.icon.thLarge,
+        items: [
+          {
+            label: 'Input',
+            icon: EnumerableIconsPrimeng.icon.minus,
+            routerLink: 'input'
+          },
+          {
+            label: 'Button',
+            icon: EnumerableIconsPrimeng.icon.circleOn,
+            routerLink: 'button'
+          }
+          ]
+      },
+      {
+        label: 'Table CRUD',
+        icon: EnumerableIconsPrimeng.icon.table
+      }
+      ];
   }
 }

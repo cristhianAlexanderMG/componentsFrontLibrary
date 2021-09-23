@@ -11,6 +11,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { InputPrimengComponent } from './components/shared/input-primeng/input-primeng.component';
 import { InputPrimengExampleComponent } from './components/examples/input-primeng-example/input-primeng-example.component';
 import { HomeComponent } from './components/home/home.component';
+import { ButtonPrimengExampleComponent } from './components/examples/button-primeng-example/button-primeng-example.component';
+import { ButtonPrimengComponent } from './components/shared/button-primeng/button-primeng.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HomeComponent } from './components/home/home.component';
     MenuComponent,
     InputPrimengComponent,
     InputPrimengExampleComponent,
-    HomeComponent
+    HomeComponent,
+    ButtonPrimengExampleComponent,
+    ButtonPrimengComponent
   ],
   imports: [
     BrowserModule,
