@@ -56,6 +56,11 @@ export class MenuComponent {
         label: 'Table CRUD',
         icon: EnumerableIconsPrimeng.icon.table,
         routerLink: 'table'
+      },
+      {
+        label: 'Themes',
+        icon: EnumerableIconsPrimeng.icon.palette,
+        routerLink: 'themes'
       }
       ];
   }

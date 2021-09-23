@@ -7,6 +7,7 @@ import {DropdownPrimengExampleComponent} from "./components/examples/dropdown-pr
 import {WordPrimengExampleComponent} from "./components/examples/word-primeng-example/word-primeng-example.component";
 import {CalendarPrimengExampleComponent} from "./components/examples/calendar-primeng-example/calendar-primeng-example.component";
 import {TablePrimengExampleComponent} from "./components/examples/table-primeng-example/table-primeng-example.component";
+import {ThemesPrimengExampleComponent} from "./components/examples/themes-primeng-example/themes-primeng-example.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'word', component: WordPrimengExampleComponent },
   { path: 'calendar', component: CalendarPrimengExampleComponent },
   { path: 'table', component: TablePrimengExampleComponent },
+  { path: 'themes', component: ThemesPrimengExampleComponent },
   { path: '**', component: HomeComponent },
 ];
 

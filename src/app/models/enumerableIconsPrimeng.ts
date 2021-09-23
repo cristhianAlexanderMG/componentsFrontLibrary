@@ -8,7 +8,8 @@ export abstract class EnumerableIconsPrimeng {
     home: 'pi pi-home',
     bars: 'pi pi-bars',
     info: 'pi pi-info',
-    calendar: 'pi pi-calendar'
+    calendar: 'pi pi-calendar',
+    palette: 'pi pi-palette'
 
 
 
