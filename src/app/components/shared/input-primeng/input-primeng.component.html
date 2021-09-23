@@ -1,0 +1,20 @@
+<div class="p-fluid mt-2 mb-2">
+  <div class="p-field">
+    <label class="{{ styleClassLabel }}">{{ label }}</label>
+    <div class="p-inputgroup">
+    <span *ngIf="withIcon" class="p-inputgroup-addon">
+      <i class="{{ icon }}"></i>
+    </span>
+      <input
+        (change)="validations()"
+        (keyup)="validations()"
+        [type]="type"
+        [disabled]="disabled"
+        [required]="required"
+        [class]="styleClass"
+        [(ngModel)]="value"
+        pInputText/>
+    </div>
+    <small *ngIf="showSmall">{{ labelSmall }}</small>
+  </div>
+</div>
