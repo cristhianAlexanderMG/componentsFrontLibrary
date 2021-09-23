@@ -17,6 +17,8 @@ import { DropdownPrimengComponent } from './components/shared/dropdown-primeng/d
 import { DropdownPrimengExampleComponent } from './components/examples/dropdown-primeng-example/dropdown-primeng-example.component';
 import { WordPrimengExampleComponent } from './components/examples/word-primeng-example/word-primeng-example.component';
 import { WordPrimengComponent } from './components/shared/word-primeng/word-primeng.component';
+import { CalendarPrimengExampleComponent } from './components/examples/calendar-primeng-example/calendar-primeng-example.component';
+import { CalendarPrimengComponent } from './components/shared/calendar-primeng/calendar-primeng.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { WordPrimengComponent } from './components/shared/word-primeng/word-prim
     DropdownPrimengComponent,
     DropdownPrimengExampleComponent,
     WordPrimengExampleComponent,
-    WordPrimengComponent
+    WordPrimengComponent,
+    CalendarPrimengExampleComponent,
+    CalendarPrimengComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+<p-card header="Calendar Component">
+  <p-accordion [multiple]="true">
+    <p-accordionTab header="Basic">
+      <app-calendar-primeng
+        [label]="'Basic'"
+      ></app-calendar-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Required">
+      <app-calendar-primeng
+        [label]="'Required'"
+        [required]="true"
+      ></app-calendar-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Disabled">
+      <app-calendar-primeng
+        [label]="'Disabled'"
+        [disabled]="true"
+      ></app-calendar-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="With Value">
+      <app-calendar-primeng
+        [label]="'With Value'"
+        [value]="date"
+      ></app-calendar-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="With Small">
+      <app-calendar-primeng
+        [label]="'With Small'"
+        [showSmall]="true"
+        [labelSmall]="'Text Example'"
+      ></app-calendar-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="With Time">
+      <app-calendar-primeng
+        [label]="'With Time'"
+        [withTime]="true"
+      ></app-calendar-primeng>
+    </p-accordionTab>
+  </p-accordion>
+</p-card>

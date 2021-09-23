@@ -44,6 +44,11 @@ export class MenuComponent {
             label: 'Word',
             icon: EnumerableIconsPrimeng.icon.info,
             routerLink: 'word'
+          },
+          {
+            label: 'Calendar',
+            icon: EnumerableIconsPrimeng.icon.calendar,
+            routerLink: 'calendar'
           }
           ]
       },

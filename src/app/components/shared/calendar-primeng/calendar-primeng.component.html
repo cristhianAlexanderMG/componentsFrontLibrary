@@ -1,0 +1,19 @@
+<div class="p-fluid mt-2 mb-2">
+  <div class="p-field">
+    <label class="{{ styleClassLabel }}">{{ label }}</label>
+    <div class="p-inputgroup">
+      <p-calendar
+        [(ngModel)]="value"
+        [showTime]="withTime"
+        [dateFormat]="format"
+        [hourFormat]="hourFormat"
+        [disabled]="disabled"
+        [readonlyInput]="true"
+        [required]="required"
+        [class]="styleClass"
+        (onSelect)="validations()"
+      ></p-calendar>
+    </div>
+    <small *ngIf="showSmall">{{ labelSmall }}</small>
+  </div>
+</div>
