@@ -8,23 +8,55 @@ import {UtilsService} from "../../../services/utils.service";
   styleUrls: ['./input-primeng.component.scss']
 })
 export class InputPrimengComponent implements OnInit {
+  // Value by default
   @Input() value: any = null;
+
+  // Name of input
   @Input() label: string = 'Label';
+
+  // Text of the small
   @Input() labelSmall: string = 'Small';
+
+  // Name of icon
   @Input() icon: string = '';
+
+  // Type of input
   @Input() type: string = EnumerablesTypesApp.enumTypeInput.Text;
+
+  // Size of input
   @Input() size: string = EnumerablesTypesApp.enumSize.Normal;
-  @Input() withIcon: boolean = false;
-  @Input() withRangeOfNumbers: boolean = false;
+
+  // Check if had a range of dates
   @Input() withRangeOfDates: boolean = false;
+
+  // Check if had a range of numbers
+  @Input() withRangeOfNumbers: boolean = false;
+
+  // Check if show small
   @Input() showSmall: boolean = false;
+
+  // Check if show icon
+  @Input() withIcon: boolean = false;
+
+  // Check if is required
   @Input() required: boolean = false;
+
+  // Check if is disabled
   @Input() disabled: boolean = false;
+
+  // Range of number minimum
   @Input() minimumNumber: number = 0;
+
+  // Range of number maximum
   @Input() maximumNumber: number = 0;
+
+  // Range of date minimum
   @Input() minimumDate: string = new Date().toDateString();
+
+  // Range of date maximum
   @Input() maximumDate: string = new Date().toDateString();
 
+  // Object to return
   @Output() returnValue = new EventEmitter<any>();
 
   styleClass: string = '';

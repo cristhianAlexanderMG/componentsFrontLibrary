@@ -1,1 +1,120 @@
-<p>input-primeng-example works!</p>
+<p-card header="Input Component">
+  <p-accordion>
+    <p-accordionTab header="Basic">
+      <app-input-primeng
+        [label]="'Basic'"
+      ></app-input-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Disabled">
+      <app-input-primeng
+        [label]="'Disabled'"
+        [disabled]="true"
+      ></app-input-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Required">
+      <app-input-primeng
+        [label]="'Required'"
+        [value]="null"
+        [required]="true"
+      ></app-input-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Types">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Number'"
+              [type]="enumTypeInput.Number"
+            ></app-input-primeng>
+          </div>
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Text'"
+              [type]="enumTypeInput.Text"
+            ></app-input-primeng>
+          </div>
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Email'"
+              [type]="enumTypeInput.Email"
+            ></app-input-primeng>
+          </div>
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Password'"
+              [type]="enumTypeInput.Password"
+            ></app-input-primeng>
+          </div>
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Date'"
+              [type]="enumTypeInput.Date"
+            ></app-input-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+    <p-accordionTab header="Sizes">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <app-input-primeng
+              [label]="'Small'"
+              [size]="enumSize.Small"
+            ></app-input-primeng>
+          </div>
+          <div class="col-4">
+            <app-input-primeng
+              [label]="'Normal'"
+              [size]="enumSize.Normal"
+            ></app-input-primeng>
+          </div>
+          <div class="col-4">
+            <app-input-primeng
+              [label]="'Large'"
+              [size]="enumSize.Large"
+            ></app-input-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+    <p-accordionTab header="With Value">
+      <app-input-primeng
+        [label]="'With Value'"
+        [value]="'Default'"
+      ></app-input-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="With Small">
+      <app-input-primeng
+        [label]="'With Icon'"
+        [labelSmall]="'Small Example'"
+        [showSmall]="true"
+      ></app-input-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="With Icon">
+      <app-input-primeng
+        [label]="'With Icon'"
+        [icon]="enumIcon.android"
+        [withIcon]="true"
+      ></app-input-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="With Range Of Numbers">
+      <app-input-primeng
+        [label]="'With Range Of Numbers - (Minimum 0 = Maximum 2)'"
+        [withRangeOfNumbers]="true"
+        [type]="enumTypeInput.Number"
+        [minimumNumber]="0"
+        [maximumNumber]="2"
+      ></app-input-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="With Range Of Dates">
+      <app-input-primeng
+        [label]="'With Range Of Dates - (Minimum Today = Maximum Tomorrow)'"
+        [withRangeOfDates]="true"
+        [type]="enumTypeInput.Date"
+        [minimumDate]="date1"
+        [maximumDate]="date2"
+      ></app-input-primeng>
+    </p-accordionTab>
+  </p-accordion>
+</p-card>
