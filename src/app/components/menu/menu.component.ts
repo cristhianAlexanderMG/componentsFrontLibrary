@@ -39,6 +39,11 @@ export class MenuComponent {
             label: 'Dropdown',
             icon: EnumerableIconsPrimeng.icon.bars,
             routerLink: 'dropdown'
+          },
+          {
+            label: 'Word',
+            icon: EnumerableIconsPrimeng.icon.info,
+            routerLink: 'word'
           }
           ]
       },

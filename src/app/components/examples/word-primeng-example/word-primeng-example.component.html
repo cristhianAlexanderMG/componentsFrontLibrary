@@ -1,0 +1,118 @@
+<p-card header="Word Component">
+  <p-accordion [multiple]="true">
+    <p-accordionTab header="Basic">
+      <app-word-primeng
+        [value]="'Basic'"
+      ></app-word-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Strong">
+      <app-word-primeng
+        [value]="'Strong'"
+        [strong]="true"
+      ></app-word-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Types">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'Normal'"
+              [type]="enumTypeWord.Normal"
+            ></app-word-primeng>
+          </div>
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'Subtitle'"
+              [type]="enumTypeWord.Subtitle"
+            ></app-word-primeng>
+          </div>
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'Title'"
+              [type]="enumTypeWord.Title"
+            ></app-word-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+    <p-accordionTab header="Alignment">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'Start'"
+              [alignment]="enumTypeAlignment.Start"
+            ></app-word-primeng>
+          </div>
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'Center'"
+              [alignment]="enumTypeAlignment.Center"
+            ></app-word-primeng>
+          </div>
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'End'"
+              [alignment]="enumTypeAlignment.End"
+            ></app-word-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+    <p-accordionTab header="Text Transform">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <app-word-primeng
+              [value]="'Normal'"
+              [textTransform]="enumTextTransform.Normal"
+            ></app-word-primeng>
+          </div>
+          <div class="col-6">
+            <app-word-primeng
+              [value]="'Uppercase'"
+              [textTransform]="enumTextTransform.Uppercase"
+            ></app-word-primeng>
+          </div>
+          <div class="col-6">
+            <app-word-primeng
+              [value]="'Lowercase'"
+              [textTransform]="enumTextTransform.Lowercase"
+            ></app-word-primeng>
+          </div>
+          <div class="col-6">
+            <app-word-primeng
+              [value]="'Capitalize'"
+              [textTransform]="enumTextTransform.Capitalize"
+            ></app-word-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+    <p-accordionTab header="Text Decoration">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'Normal'"
+              [textDecoration]="enumTextDecoration.Normal"
+            ></app-word-primeng>
+          </div>
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'Link'"
+              [refOfTheLink]="'/word'"
+              [textDecoration]="enumTextDecoration.Link"
+            ></app-word-primeng>
+          </div>
+          <div class="col-4">
+            <app-word-primeng
+              [value]="'Underline'"
+              [textDecoration]="enumTextDecoration.Underline"
+            ></app-word-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+  </p-accordion>
+</p-card>

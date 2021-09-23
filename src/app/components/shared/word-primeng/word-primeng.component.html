@@ -1,0 +1,46 @@
+<div style="padding: 0; margin: 0" class="{{styleClass}}">
+  <h1 *ngIf="enumTypeWord.Title == type">
+    <p *ngIf="strong && textDecoration != enumTextDecoration.Link">
+      <strong>  {{ value }} </strong>
+    </p>
+    <p *ngIf="!strong && textDecoration != enumTextDecoration.Link">
+      {{ value }}
+    </p>
+    <a *ngIf="strong && textDecoration == enumTextDecoration.Link" href="{{refOfTheLink}}">
+      <strong>  {{ value }} </strong>
+    </a>
+    <a *ngIf="!strong && textDecoration == enumTextDecoration.Link" href="{{refOfTheLink}}">
+      <strong>  {{ value }} </strong>
+    </a>
+  </h1>
+
+  <h3 *ngIf="enumTypeWord.Subtitle == type">
+    <p *ngIf="strong && textDecoration != enumTextDecoration.Link">
+      <strong>  {{ value }} </strong>
+    </p>
+    <p *ngIf="!strong && textDecoration != enumTextDecoration.Link">
+      {{ value }}
+    </p>
+    <a *ngIf="strong && textDecoration == enumTextDecoration.Link" href="{{refOfTheLink}}">
+      <strong>  {{ value }} </strong>
+    </a>
+    <a *ngIf="!strong && textDecoration == enumTextDecoration.Link" href="{{refOfTheLink}}">
+      <strong>  {{ value }} </strong>
+    </a>
+  </h3>
+
+  <h6 *ngIf="enumTypeWord.Normal == type" class="{{ styleClass }}">
+    <p *ngIf="strong && textDecoration != enumTextDecoration.Link">
+      <strong>  {{ value }} </strong>
+    </p>
+    <p *ngIf="!strong && textDecoration != enumTextDecoration.Link">
+      {{ value }}
+    </p>
+    <a *ngIf="strong && textDecoration == enumTextDecoration.Link" href="{{refOfTheLink}}">
+      <strong>  {{ value }} </strong>
+    </a>
+    <a *ngIf="!strong && textDecoration == enumTextDecoration.Link" href="{{refOfTheLink}}">
+      <strong>  {{ value }} </strong>
+    </a>
+  </h6>
+</div>

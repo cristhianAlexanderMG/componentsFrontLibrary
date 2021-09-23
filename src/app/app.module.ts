@@ -15,6 +15,8 @@ import { ButtonPrimengExampleComponent } from './components/examples/button-prim
 import { ButtonPrimengComponent } from './components/shared/button-primeng/button-primeng.component';
 import { DropdownPrimengComponent } from './components/shared/dropdown-primeng/dropdown-primeng.component';
 import { DropdownPrimengExampleComponent } from './components/examples/dropdown-primeng-example/dropdown-primeng-example.component';
+import { WordPrimengExampleComponent } from './components/examples/word-primeng-example/word-primeng-example.component';
+import { WordPrimengComponent } from './components/shared/word-primeng/word-primeng.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DropdownPrimengExampleComponent } from './components/examples/dropdown-
     ButtonPrimengExampleComponent,
     ButtonPrimengComponent,
     DropdownPrimengComponent,
-    DropdownPrimengExampleComponent
+    DropdownPrimengExampleComponent,
+    WordPrimengExampleComponent,
+    WordPrimengComponent
   ],
   imports: [
     BrowserModule,
