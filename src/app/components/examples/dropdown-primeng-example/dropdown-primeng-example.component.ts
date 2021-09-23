@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UtilsService} from "../../../services/utils.service";
 
 @Component({
   selector: 'app-dropdown-primeng-example',
@@ -16,14 +17,5 @@ export class DropdownPrimengExampleComponent {
     name: 'Type 1'
   };
 
-  list = [
-    {
-      id: 1,
-      name: 'Type 1'
-    },
-    {
-      id: 2,
-      name: 'Type 2'
-    }
-  ];
+  list = UtilsService.getDataExample().data;
 }

@@ -9,6 +9,9 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {DropdownModule} from 'primeng/dropdown';
 import {CalendarModule} from 'primeng/calendar';
+import {ToolbarModule} from 'primeng/toolbar';
+import {DialogModule} from 'primeng/dialog';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [],
@@ -21,7 +24,10 @@ import {CalendarModule} from 'primeng/calendar';
     InputTextModule,
     ButtonModule,
     DropdownModule,
-    CalendarModule
+    CalendarModule,
+    ToolbarModule,
+    DialogModule,
+    TableModule
   ],
   exports: [
     CommonModule,
@@ -32,7 +38,10 @@ import {CalendarModule} from 'primeng/calendar';
     InputTextModule,
     ButtonModule,
     DropdownModule,
-    CalendarModule
+    CalendarModule,
+    ToolbarModule,
+    DialogModule,
+    TableModule
   ]
 })
 export class PrimengModule { }

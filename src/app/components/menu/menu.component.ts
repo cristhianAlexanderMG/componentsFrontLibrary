@@ -54,7 +54,8 @@ export class MenuComponent {
       },
       {
         label: 'Table CRUD',
-        icon: EnumerableIconsPrimeng.icon.table
+        icon: EnumerableIconsPrimeng.icon.table,
+        routerLink: 'table'
       }
       ];
   }

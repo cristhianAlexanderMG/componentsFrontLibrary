@@ -1,0 +1,10 @@
+<p-card header="Table CRUD">
+  <app-table-primeng
+    [titleTable]="'Basic'"
+    [data]="data"
+    [objectExample]="objectExample"
+    [columns]="columns"
+    (returnValue)="returnValue($event)"
+    [loading]="loading"
+  ></app-table-primeng>
+</p-card>

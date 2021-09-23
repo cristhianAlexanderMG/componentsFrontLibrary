@@ -6,6 +6,7 @@ import {ButtonPrimengExampleComponent} from "./components/examples/button-primen
 import {DropdownPrimengExampleComponent} from "./components/examples/dropdown-primeng-example/dropdown-primeng-example.component";
 import {WordPrimengExampleComponent} from "./components/examples/word-primeng-example/word-primeng-example.component";
 import {CalendarPrimengExampleComponent} from "./components/examples/calendar-primeng-example/calendar-primeng-example.component";
+import {TablePrimengExampleComponent} from "./components/examples/table-primeng-example/table-primeng-example.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'dropdown', component: DropdownPrimengExampleComponent },
   { path: 'word', component: WordPrimengExampleComponent },
   { path: 'calendar', component: CalendarPrimengExampleComponent },
+  { path: 'table', component: TablePrimengExampleComponent },
   { path: '**', component: HomeComponent },
 ];
 

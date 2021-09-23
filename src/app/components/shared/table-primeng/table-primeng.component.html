@@ -1,0 +1,144 @@
+<div class="container">
+  <p-toolbar>
+    <ng-template pTemplate="left">
+      <app-word-primeng
+        [value]="titleTable"
+        [type]="enumTypeWord.Subtitle"
+      ></app-word-primeng>
+    </ng-template>
+
+    <ng-template pTemplate="right">
+      <app-button-primeng
+        *ngIf="itIsUpdatable"
+        [label]="nameButton1"
+        [icon]="icon1"
+        [loading]="loading"
+        (onClick)="openModal()"
+      ></app-button-primeng>
+      <app-button-primeng
+        *ngIf="itIsDownloadable"
+        [label]="nameButton2"
+        [icon]="icon2"
+        [loading]="loading"
+        (onClick)="exportData()"
+      ></app-button-primeng>
+    </ng-template>
+  </p-toolbar>
+  <p-table
+    [value]="data"
+    [styleClass]="styleClass"
+    [paginator]="true"
+    [rowsPerPageOptions]="rowsPerPageOptions"
+    [loading]="loading"
+    [rows]="rowsPerPageOptions[0]"
+    [selectionMode]="selectionMode"
+    [(selection)]="selectedObject"
+    (onRowSelect)="onRowSelect()"
+    (onRowUnselect)="onRowUnselect()"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of columns" pSortableColumn="{{col.field}}">
+          <div style="display: flex; justify-content: center; align-content: center">
+            <app-word-primeng
+              [strong]="true"
+              [value]="col.header"
+            ></app-word-primeng>
+            <p-sortIcon field="{{col.field}}"></p-sortIcon>
+          </div>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+      <tr [pSelectableRow]="item">
+        <td *ngFor="let col of columns">
+          <div *ngIf="col.type == enumTypeColumnTable.Input">
+            <app-word-primeng
+              *ngIf="col.typeInput == enumTypeInput.Email || col.typeInput == enumTypeInput.Text || col.typeInput == enumTypeInput.Date"
+              [value]="item[col.field]"
+              [alignment]="enumTypeAlignment.Start"
+            ></app-word-primeng>
+            <app-word-primeng
+              *ngIf="col.typeInput == enumTypeInput.Number"
+              [value]="item[col.field]"
+            ></app-word-primeng>
+          </div>
+          <div *ngIf="col.type == enumTypeColumnTable.Calendar">
+            {{ showCalendar(item[col.field]) | date }}
+          </div>
+          <div *ngIf="col.type == enumTypeColumnTable.Dropdown">
+            {{  getToShowRelationByUid(col.items, item[col.field], col.labelSelected) }}
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        <app-word-primeng
+          [value]="messageTotalRecords"
+          [alignment]="enumTypeAlignment.Start"
+        ></app-word-primeng>
+      </div>
+    </ng-template>
+  </p-table>
+</div>
+
+<p-dialog
+  header="{{nameButton1}} Item"
+  [(visible)]="visibleModal"
+  [modal]="true"
+  [style]="{width: '50vw'}"
+  [draggable]="false"
+  [resizable]="false"
+  (close)="closeModal()"
+>
+  <div class="container" *ngFor="let col of columns">
+    <app-input-primeng
+      *ngIf="col.type == enumTypeColumnTable.Input"
+      [label]="col.header"
+      [value]="(selectedObject != null) ? (selectedObject[col.field]) : null"
+      [type]="col.typeInput"
+      [required]="col.required"
+      [disabled]="col.disabled"
+      (returnValue)="validateReturnValue(col.field, $event, col.type)"
+    ></app-input-primeng>
+
+    <app-dropdown-primeng
+      *ngIf="col.type == enumTypeColumnTable.Dropdown"
+      [objectSelected]="searchObjectDropdown(col.object, col.items, selectedObject[col.field])"
+      [labelSelected]="col.labelSelected"
+      [nameLabel]="col.nameLabel"
+      [list]="col.items"
+      [required]="col.required"
+      [disabled]="col.disabled"
+      (returnValue)="validateReturnValue(col.field, $event.uid, col.type)"
+    ></app-dropdown-primeng>
+
+    <app-calendar-primeng
+      *ngIf="col.type == enumTypeColumnTable.Calendar"
+      [label]="col.header"
+      [value]="selectedObject[col.field] == null ? null : selectedObject[col.field]"
+      (returnValue)="validateReturnValue(col.field, $event, col.type)"
+    ></app-calendar-primeng>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <p-toolbar [style]="{'border-radius': '0px', 'border': 'none'}">
+      <ng-template pTemplate="left">
+        <app-button-primeng
+          [label]="nameButton3"
+          [icon]="icon3"
+          (onClick)="saveModal()"
+          [disabled]="disabledButtonModal"
+        ></app-button-primeng>
+      </ng-template>
+      <ng-template pTemplate="right">
+        <app-button-primeng
+          [label]="nameButton4"
+          [icon]="icon4"
+          (onClick)="closeModal()"
+        ></app-button-primeng>
+      </ng-template>
+    </p-toolbar>
+  </ng-template>
+</p-dialog>
