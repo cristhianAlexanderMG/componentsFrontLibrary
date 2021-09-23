@@ -1,0 +1,16 @@
+<div class="p-fluid mt-2 mb-2">
+  <div class="p-field">
+    <label class="{{ styleClassLabel }}">{{ nameLabel }}</label>
+    <p-dropdown
+      (onChange)="validation()"
+      [required]="required"
+      [options]="list"
+      [(ngModel)]="objectSelected"
+      [optionLabel]="labelSelected"
+      [class]="styleClass"
+      [filterBy]="labelSelected"
+      [disabled]="disabled"
+      [placeholder]="namePlaceholder">
+    </p-dropdown>
+  </div>
+</div>

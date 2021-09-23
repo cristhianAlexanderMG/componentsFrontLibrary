@@ -34,6 +34,11 @@ export class MenuComponent {
             label: 'Button',
             icon: EnumerableIconsPrimeng.icon.circleOn,
             routerLink: 'button'
+          },
+          {
+            label: 'Dropdown',
+            icon: EnumerableIconsPrimeng.icon.bars,
+            routerLink: 'dropdown'
           }
           ]
       },

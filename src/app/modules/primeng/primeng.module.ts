@@ -7,6 +7,7 @@ import {CardModule} from 'primeng/card';
 import {AccordionModule} from 'primeng/accordion';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   declarations: [],
@@ -17,7 +18,8 @@ import {ButtonModule} from 'primeng/button';
     CardModule,
     AccordionModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    DropdownModule
   ],
   exports: [
     CommonModule,
@@ -26,7 +28,8 @@ import {ButtonModule} from 'primeng/button';
     CardModule,
     AccordionModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    DropdownModule
   ]
 })
 export class PrimengModule { }

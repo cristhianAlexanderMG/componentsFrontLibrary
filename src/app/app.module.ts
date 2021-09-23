@@ -13,6 +13,8 @@ import { InputPrimengExampleComponent } from './components/examples/input-primen
 import { HomeComponent } from './components/home/home.component';
 import { ButtonPrimengExampleComponent } from './components/examples/button-primeng-example/button-primeng-example.component';
 import { ButtonPrimengComponent } from './components/shared/button-primeng/button-primeng.component';
+import { DropdownPrimengComponent } from './components/shared/dropdown-primeng/dropdown-primeng.component';
+import { DropdownPrimengExampleComponent } from './components/examples/dropdown-primeng-example/dropdown-primeng-example.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ButtonPrimengComponent } from './components/shared/button-primeng/butto
     InputPrimengExampleComponent,
     HomeComponent,
     ButtonPrimengExampleComponent,
-    ButtonPrimengComponent
+    ButtonPrimengComponent,
+    DropdownPrimengComponent,
+    DropdownPrimengExampleComponent
   ],
   imports: [
     BrowserModule,

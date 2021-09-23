@@ -5,7 +5,9 @@ export abstract class EnumerableIconsPrimeng {
     minus: 'pi pi-minus',
     android: 'pi pi-android',
     circleOn: 'pi pi-circle-on',
-    home: 'pi pi-home'
+    home: 'pi pi-home',
+    bars: 'pi pi-bars'
+
 
 
 

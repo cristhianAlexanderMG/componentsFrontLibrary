@@ -1,0 +1,38 @@
+<p-card header="Dropdown Component">
+  <p-accordion [multiple]="true">
+    <p-accordionTab header="Basic">
+      <app-dropdown-primeng
+        [nameLabel]="'Basic'"
+        [list]="list"
+        [labelSelected]="'name'"
+        [objectSelected]="objectExample"
+      ></app-dropdown-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="With Value Selected">
+      <app-dropdown-primeng
+        [nameLabel]="'With Value Selected'"
+        [list]="list"
+        [labelSelected]="'name'"
+        [objectSelected]="objectSelected"
+      ></app-dropdown-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Disabled">
+      <app-dropdown-primeng
+        [nameLabel]="'Disabled'"
+        [list]="list"
+        [labelSelected]="'name'"
+        [objectSelected]="objectExample"
+        [disabled]="true"
+      ></app-dropdown-primeng>
+    </p-accordionTab>
+    <p-accordionTab header="Required">
+      <app-dropdown-primeng
+        [nameLabel]="'Required'"
+        [list]="list"
+        [labelSelected]="'name'"
+        [objectSelected]="objectExample"
+        [required]="true"
+      ></app-dropdown-primeng>
+    </p-accordionTab>
+  </p-accordion>
+</p-card>
