@@ -22,6 +22,7 @@ import { CalendarPrimengComponent } from './components/shared/calendar-primeng/c
 import { TablePrimengComponent } from './components/shared/table-primeng/table-primeng.component';
 import { TablePrimengExampleComponent } from './components/examples/table-primeng-example/table-primeng-example.component';
 import { ThemesPrimengExampleComponent } from './components/examples/themes-primeng-example/themes-primeng-example.component';
+import {ThemeService} from "./services/theme.service";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { ThemesPrimengExampleComponent } from './components/examples/themes-prim
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
