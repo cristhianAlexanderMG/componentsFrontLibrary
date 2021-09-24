@@ -13,6 +13,7 @@ import {ToolbarModule} from 'primeng/toolbar';
 import {DialogModule} from 'primeng/dialog';
 import {TableModule} from 'primeng/table';
 import {EditorModule} from 'primeng/editor';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [],
@@ -29,7 +30,8 @@ import {EditorModule} from 'primeng/editor';
     ToolbarModule,
     DialogModule,
     TableModule,
-    EditorModule
+    EditorModule,
+    InputTextareaModule
   ],
   exports: [
     CommonModule,
@@ -44,7 +46,8 @@ import {EditorModule} from 'primeng/editor';
     ToolbarModule,
     DialogModule,
     TableModule,
-    EditorModule
+    EditorModule,
+    InputTextareaModule
   ]
 })
 export class PrimengModule { }

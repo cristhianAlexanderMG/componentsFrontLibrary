@@ -6,6 +6,7 @@
       <i class="{{ icon }}"></i>
     </span>
       <input
+        *ngIf="!isTextArea"
         (change)="validations()"
         (keyup)="validations()"
         [type]="type"
@@ -14,6 +15,13 @@
         [class]="styleClass"
         [(ngModel)]="value"
         pInputText/>
+      <textarea
+        *ngIf="isTextArea"
+        rows="5"
+        cols="30"
+        pInputTextarea
+        [(ngModel)]="value"
+      ></textarea>
     </div>
     <small *ngIf="showSmall">{{ labelSmall }}</small>
   </div>

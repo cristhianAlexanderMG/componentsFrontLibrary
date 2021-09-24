@@ -41,6 +41,9 @@ export class InputPrimengComponent implements OnInit {
   // Check if is required
   @Input() required: boolean = false;
 
+  // Check if is textArea
+  @Input() isTextArea: boolean = false;
+
   // Check if is disabled
   @Input() disabled: boolean = false;
 
