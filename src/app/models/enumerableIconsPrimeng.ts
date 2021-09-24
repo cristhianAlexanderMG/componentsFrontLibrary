@@ -9,12 +9,8 @@ export abstract class EnumerableIconsPrimeng {
     bars: 'pi pi-bars',
     info: 'pi pi-info',
     calendar: 'pi pi-calendar',
+    desktop: 'pi pi-desktop',
     palette: 'pi pi-palette'
-
-
-
-
-
 
   }
 }

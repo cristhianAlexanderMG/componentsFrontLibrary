@@ -1,7 +1,7 @@
 <p-card header="Themes">
   <p-accordion [multiple]="true">
     <p-accordionTab *ngFor="let theme of listThemes" header="{{theme.name}}">
-      <button pButton type="button" label="{{theme.name}}" (click)="appComponent.changeTheme(theme.code)"></button>
+      <button pButton type="button" label="{{theme.name}}" (click)="changeTheme(theme.code)"></button>
     </p-accordionTab>
   </p-accordion>
 </p-card>

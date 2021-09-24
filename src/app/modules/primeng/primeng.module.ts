@@ -12,6 +12,7 @@ import {CalendarModule} from 'primeng/calendar';
 import {ToolbarModule} from 'primeng/toolbar';
 import {DialogModule} from 'primeng/dialog';
 import {TableModule} from 'primeng/table';
+import {EditorModule} from 'primeng/editor';
 
 @NgModule({
   declarations: [],
@@ -27,7 +28,8 @@ import {TableModule} from 'primeng/table';
     CalendarModule,
     ToolbarModule,
     DialogModule,
-    TableModule
+    TableModule,
+    EditorModule
   ],
   exports: [
     CommonModule,
@@ -41,7 +43,8 @@ import {TableModule} from 'primeng/table';
     CalendarModule,
     ToolbarModule,
     DialogModule,
-    TableModule
+    TableModule,
+    EditorModule
   ]
 })
 export class PrimengModule { }

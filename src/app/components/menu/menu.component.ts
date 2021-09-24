@@ -26,14 +26,14 @@ export class MenuComponent {
         icon: EnumerableIconsPrimeng.icon.thLarge,
         items: [
           {
-            label: 'Input',
-            icon: EnumerableIconsPrimeng.icon.minus,
-            routerLink: 'input'
-          },
-          {
             label: 'Button',
             icon: EnumerableIconsPrimeng.icon.circleOn,
             routerLink: 'button'
+          },
+          {
+            label: 'Calendar',
+            icon: EnumerableIconsPrimeng.icon.calendar,
+            routerLink: 'calendar'
           },
           {
             label: 'Dropdown',
@@ -41,14 +41,19 @@ export class MenuComponent {
             routerLink: 'dropdown'
           },
           {
+            label: 'Editor',
+            icon: EnumerableIconsPrimeng.icon.desktop,
+            routerLink: 'editor'
+          },
+          {
+            label: 'Input',
+            icon: EnumerableIconsPrimeng.icon.minus,
+            routerLink: 'input'
+          },
+          {
             label: 'Word',
             icon: EnumerableIconsPrimeng.icon.info,
             routerLink: 'word'
-          },
-          {
-            label: 'Calendar',
-            icon: EnumerableIconsPrimeng.icon.calendar,
-            routerLink: 'calendar'
           }
           ]
       },

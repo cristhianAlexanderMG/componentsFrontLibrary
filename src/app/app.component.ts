@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {PrimeNGConfig} from "primeng/api";
-import {ThemeService} from "./services/theme.service";
 
 @Component({
   selector: 'app-root',
@@ -10,14 +9,9 @@ import {ThemeService} from "./services/theme.service";
 export class AppComponent implements OnInit {
   title = 'componentsFrontLibrary';
 
-  constructor(private primengConfig: PrimeNGConfig,
-              private themeService: ThemeService) {}
+  constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit() {
     this.primengConfig.ripple = true;
-  }
-
-  public changeTheme(theme: string) {
-    this.themeService.switchTheme(theme);
   }
 }

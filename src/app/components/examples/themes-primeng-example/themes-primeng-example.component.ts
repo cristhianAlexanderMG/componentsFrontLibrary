@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {AppComponent} from "../../../app.component";
 import {ThemeService} from "../../../services/theme.service";
 
 @Component({
@@ -10,8 +9,11 @@ import {ThemeService} from "../../../services/theme.service";
 export class ThemesPrimengExampleComponent {
   listThemes: any[] = [];
 
-  constructor(public appComponent: AppComponent,
-              private themeService: ThemeService) {
+  constructor(private themeService: ThemeService) {
     this.listThemes = themeService.getThemes();
+  }
+
+  public changeTheme(theme: string) {
+    this.themeService.switchTheme(theme);
   }
 }
