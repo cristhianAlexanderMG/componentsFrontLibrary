@@ -47,6 +47,9 @@ export class InputPrimengComponent implements OnInit {
   // Check if is UploadFile
   @Input() isUploadFile: boolean = false;
 
+  // Check if is Editor
+  @Input() isEditor: boolean = false;
+
   // Check if is disabled
   @Input() disabled: boolean = false;
 

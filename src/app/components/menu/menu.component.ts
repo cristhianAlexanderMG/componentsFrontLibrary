@@ -41,11 +41,6 @@ export class MenuComponent {
             routerLink: 'dropdown'
           },
           {
-            label: 'Editor',
-            icon: EnumerableIconsPrimeng.icon.desktop,
-            routerLink: 'editor'
-          },
-          {
             label: 'Input',
             icon: EnumerableIconsPrimeng.icon.minus,
             routerLink: 'input'

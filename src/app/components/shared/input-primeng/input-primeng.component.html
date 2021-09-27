@@ -6,7 +6,7 @@
       <i class="{{ icon }}"></i>
     </span>
       <input
-        *ngIf="!isTextArea && !isUploadFile"
+        *ngIf="!isTextArea && !isUploadFile && !isEditor"
         (change)="validations()"
         (keyup)="validations()"
         [type]="type"
@@ -37,6 +37,12 @@
           </ul>
         </ng-template>
       </p-fileUpload>
+      <p-editor
+        *ngIf="isEditor"
+        [(ngModel)]="value"
+        [ngStyle]="{width:'100%'}"
+        [style]="{'height':'320px'}"
+      ></p-editor>
     </div>
     <small *ngIf="showSmall">{{ labelSmall }}</small>
   </div>
