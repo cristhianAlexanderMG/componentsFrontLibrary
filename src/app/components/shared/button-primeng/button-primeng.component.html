@@ -1,6 +1,6 @@
 <div class="col-12 m-1 d-flex justify-content-center align-items-center">
   <p-button
-    *ngIf="!withMenu"
+    *ngIf="!withMenu && !buttonCircleFloat"
     [disabled]="disabled"
     [loading]="loading"
     (onClick)="returnOnClick()"
@@ -11,6 +11,7 @@
     badgeClass="{{ badgeClass }}"
     badge="{{badge}}"
   ></p-button>
+
   <p-splitButton
     *ngIf="withMenu"
     [disabled]="disabled"
@@ -21,5 +22,17 @@
     (onClick)="returnOnClick()"
     [model]="optionsMenu"
   ></p-splitButton>
+
+  <div class="card" *ngIf="buttonCircleFloat">
+    <div style="height: 350px; position: relative;" class="speeddial-delay-demo">
+      <p-speedDial
+        [model]="optionsMenu"
+        [transitionDelay]="100"
+        direction="{{positionButtonCircleFloat}}"
+        showIcon="{{enumIcon.plusCircle}}"
+        hideIcon="{{enumIcon.plusMinus}}"
+      ></p-speedDial>
+    </div>
+  </div>
 </div>
 

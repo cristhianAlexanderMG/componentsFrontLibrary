@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EnumerablesTypesApp} from "../../../models/enumerablesTypesApp";
+import {EnumerableIconsPrimeng} from "../../../models/enumerableIconsPrimeng";
 
 @Component({
   selector: 'app-button-primeng',
@@ -46,6 +47,12 @@ export class ButtonPrimengComponent implements OnInit {
   // Button with options
   @Input() withMenu: boolean = false;
 
+  // Button Circle Float
+  @Input() buttonCircleFloat: boolean = false;
+
+  // Position Button Circle Float
+  @Input() positionButtonCircleFloat: string = EnumerablesTypesApp.enumPosition.Up;
+
   // Options by button
   @Input() optionsMenu: any = [];
 
@@ -54,6 +61,8 @@ export class ButtonPrimengComponent implements OnInit {
   styleClass: string = '';
   badgeClass: string = '';
   iconPos: string = '';
+
+  enumIcon = EnumerableIconsPrimeng.icon;
 
   ngOnInit(): void {
     this.identifySeverityOfTheButton();

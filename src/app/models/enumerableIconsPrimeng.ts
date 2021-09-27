@@ -11,7 +11,11 @@ export abstract class EnumerableIconsPrimeng {
     calendar: 'pi pi-calendar',
     desktop: 'pi pi-desktop',
     palette: 'pi pi-palette',
-    upload: 'pi pi-upload'
+    upload: 'pi pi-upload',
+    eye: 'pi pi-eye',
+    eyeSlash: 'pi pi-eye-slash',
+    plusCircle: 'pi pi-plus-circle',
+    plusMinus: 'pi pi-minus-circle',
 
 
   }

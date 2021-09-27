@@ -34,6 +34,12 @@ export abstract class EnumerablesTypesApp {
     Bottom: "Bottom",
     Right: "Right",
     Left: "Left",
+    Up: "Up",
+    UpRight: "UpRight",
+    UpLeft: "UpLeft",
+    Down: "Down",
+    DownRight: "DownRight",
+    DownLeft: "DownLeft",
   }
 
   static enumTypeWord = {
