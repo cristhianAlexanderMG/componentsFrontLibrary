@@ -50,6 +50,12 @@ export class InputPrimengComponent implements OnInit {
   // Check if is Editor
   @Input() isEditor: boolean = false;
 
+  // Check if is String List
+  @Input() isStringList: boolean = false;
+
+  // Check if is Checkbox
+  @Input() isCheckbox: boolean = false;
+
   // Check if is disabled
   @Input() disabled: boolean = false;
 
@@ -82,6 +88,9 @@ export class InputPrimengComponent implements OnInit {
 
   ngOnInit(): void {
     this.identifySizeOfTheInput();
+    if (this.isCheckbox) {
+      this.toBinary(this.value);
+    }
   }
 
   private identifySizeOfTheInput(): void {
@@ -215,5 +224,13 @@ export class InputPrimengComponent implements OnInit {
       this.uploadedFiles.push(file);
     }
     this.returnUploadFile.emit(this.uploadedFiles);
+  }
+
+  toBinary(value: any) {
+    if (value == 'true' || value == true) {
+      return this.value = true;
+    } else {
+      return this.value = false;
+    }
   }
 }

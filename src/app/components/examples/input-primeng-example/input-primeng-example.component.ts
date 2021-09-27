@@ -14,9 +14,4 @@ export class InputPrimengExampleComponent {
 
   date1 = new Date().toLocaleDateString();
   date2 = new Date().toLocaleDateString();
-
-  constructor() {
-    console.log(this.date1);
-    console.log(this.date2);
-  }
 }

@@ -6,7 +6,7 @@
       <i class="{{ icon }}"></i>
     </span>
       <input
-        *ngIf="!isTextArea && !isUploadFile && !isEditor"
+        *ngIf="!isTextArea && !isUploadFile && !isEditor && !isCheckbox && !isStringList"
         (change)="validations()"
         (keyup)="validations()"
         [type]="type"
@@ -22,6 +22,10 @@
         pInputTextarea
         [class]="styleClass"
         [(ngModel)]="value"
+        [disabled]="disabled"
+        [required]="required"
+        (change)="validations()"
+        (keyup)="validations()"
       ></textarea>
       <p-fileUpload
         *ngIf="isUploadFile"
@@ -42,7 +46,25 @@
         [(ngModel)]="value"
         [ngStyle]="{width:'100%'}"
         [style]="{'height':'320px'}"
+        (change)="validations()"
+        (keyup)="validations()"
       ></p-editor>
+      <p-checkbox
+        *ngIf="isCheckbox"
+        [binary]="true"
+        [(ngModel)]="value"
+        (change)="validations()"
+      ></p-checkbox>
+      <p-chips
+        *ngIf="isStringList"
+        [style]="{width:'100%'}"
+        [(ngModel)]="value"
+        [class]="styleClass"
+        [disabled]="disabled"
+        [required]="required"
+        (change)="validations()"
+        (keyup)="validations()"
+      ></p-chips>
     </div>
     <small *ngIf="showSmall">{{ labelSmall }}</small>
   </div>

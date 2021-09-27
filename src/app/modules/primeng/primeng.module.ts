@@ -16,6 +16,8 @@ import {EditorModule} from 'primeng/editor';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {FileUploadModule} from 'primeng/fileupload';
 import {HttpClientModule} from '@angular/common/http';
+import {CheckboxModule} from 'primeng/checkbox';
+import {ChipsModule} from 'primeng/chips';
 
 @NgModule({
   declarations: [],
@@ -35,7 +37,9 @@ import {HttpClientModule} from '@angular/common/http';
     EditorModule,
     InputTextareaModule,
     FileUploadModule,
-    HttpClientModule
+    HttpClientModule,
+    CheckboxModule,
+    ChipsModule
   ],
   exports: [
     CommonModule,
@@ -53,7 +57,9 @@ import {HttpClientModule} from '@angular/common/http';
     EditorModule,
     InputTextareaModule,
     FileUploadModule,
-    HttpClientModule
+    HttpClientModule,
+    CheckboxModule,
+    ChipsModule
   ]
 })
 export class PrimengModule { }
