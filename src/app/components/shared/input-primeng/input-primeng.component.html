@@ -6,7 +6,7 @@
       <i class="{{ icon }}"></i>
     </span>
       <input
-        *ngIf="!isTextArea"
+        *ngIf="!isTextArea && !isUploadFile"
         (change)="validations()"
         (keyup)="validations()"
         [type]="type"
@@ -20,8 +20,23 @@
         rows="5"
         cols="30"
         pInputTextarea
+        [class]="styleClass"
         [(ngModel)]="value"
       ></textarea>
+      <p-fileUpload
+        *ngIf="isUploadFile"
+        [ngStyle]="{width:'100%'}"
+        [class]="styleClass"
+        name="demo[]"
+        url="{{url}}"
+        (onUpload)="onUpload($event)"
+        accept="{{formatAccept}}">
+        <ng-template pTemplate="content">
+          <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+          </ul>
+        </ng-template>
+      </p-fileUpload>
     </div>
     <small *ngIf="showSmall">{{ labelSmall }}</small>
   </div>

@@ -44,6 +44,9 @@ export class InputPrimengComponent implements OnInit {
   // Check if is textArea
   @Input() isTextArea: boolean = false;
 
+  // Check if is UploadFile
+  @Input() isUploadFile: boolean = false;
+
   // Check if is disabled
   @Input() disabled: boolean = false;
 
@@ -62,16 +65,20 @@ export class InputPrimengComponent implements OnInit {
   // Object to return
   @Output() returnValue = new EventEmitter<any>();
 
+  // Object to return to Upload File
+  @Output() returnUploadFile = new EventEmitter<any>();
+
+  // Style class
   styleClass: string = '';
   styleClassLabel: string = '';
 
-  ngOnInit(): void {
-    this.buildInput();
-  }
+  // Upload File
+  uploadedFiles: any[] = [];
+  url: string = 'urlUpload';
+  formatAccept: string = 'image/*';
 
-  private buildInput(): void {
+  ngOnInit(): void {
     this.identifySizeOfTheInput();
-    this.identifyTypeOfTheInput();
   }
 
   private identifySizeOfTheInput(): void {
@@ -89,6 +96,7 @@ export class InputPrimengComponent implements OnInit {
         break;
       }
     }
+    this.identifyTypeOfTheInput();
   }
 
   private identifyTypeOfTheInput(): void {
@@ -197,5 +205,12 @@ export class InputPrimengComponent implements OnInit {
         this.styleClassLabel = ' p-error';
       }
     }
+  }
+
+  onUpload(event: any) {
+    for(let file of event.files) {
+      this.uploadedFiles.push(file);
+    }
+    this.returnUploadFile.emit(this.uploadedFiles);
   }
 }

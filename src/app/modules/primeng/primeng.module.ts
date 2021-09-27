@@ -14,6 +14,8 @@ import {DialogModule} from 'primeng/dialog';
 import {TableModule} from 'primeng/table';
 import {EditorModule} from 'primeng/editor';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import {FileUploadModule} from 'primeng/fileupload';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -31,7 +33,9 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     DialogModule,
     TableModule,
     EditorModule,
-    InputTextareaModule
+    InputTextareaModule,
+    FileUploadModule,
+    HttpClientModule
   ],
   exports: [
     CommonModule,
@@ -47,7 +51,9 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     DialogModule,
     TableModule,
     EditorModule,
-    InputTextareaModule
+    InputTextareaModule,
+    FileUploadModule,
+    HttpClientModule
   ]
 })
 export class PrimengModule { }
