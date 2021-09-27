@@ -19,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {CheckboxModule} from 'primeng/checkbox';
 import {ChipsModule} from 'primeng/chips';
 import {InputSwitchModule} from 'primeng/inputswitch';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [],
@@ -41,7 +42,8 @@ import {InputSwitchModule} from 'primeng/inputswitch';
     HttpClientModule,
     CheckboxModule,
     ChipsModule,
-    InputSwitchModule
+    InputSwitchModule,
+    RadioButtonModule
   ],
   exports: [
     CommonModule,
@@ -62,7 +64,8 @@ import {InputSwitchModule} from 'primeng/inputswitch';
     HttpClientModule,
     CheckboxModule,
     ChipsModule,
-    InputSwitchModule
+    InputSwitchModule,
+    RadioButtonModule
   ]
 })
 export class PrimengModule { }

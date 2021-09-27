@@ -11,6 +11,9 @@ export class InputPrimengComponent implements OnInit {
   // Value by default
   @Input() value: any = null;
 
+  // Value by default
+  @Input() listRadioButtons: any = [];
+
   // Name of input
   @Input() label: string = 'Label';
 
@@ -46,6 +49,9 @@ export class InputPrimengComponent implements OnInit {
 
   // Check if is UploadFile
   @Input() isUploadFile: boolean = false;
+
+  // Check if is Radio Button
+  @Input() isRadioButton: boolean = false;
 
   // Check if is Switch Input
   @Input() isSwitchInput: boolean = false;

@@ -6,7 +6,7 @@
       <i class="{{ icon }}"></i>
     </span>
       <input
-        *ngIf="!isTextArea && !isUploadFile && !isEditor && !isCheckbox && !isStringList && !isSwitchInput"
+        *ngIf="!isTextArea && !isUploadFile && !isEditor && !isRadioButton && !isCheckbox && !isStringList && !isSwitchInput"
         (change)="validations()"
         (keyup)="validations()"
         [type]="type"
@@ -46,8 +46,8 @@
         [(ngModel)]="value"
         [ngStyle]="{width:'100%'}"
         [style]="{'height':'320px'}"
-        (change)="validations()"
-        (keyup)="validations()"
+        (onTextChange)="validations()"
+        (onSelectionChange)="validations()"
       ></p-editor>
       <p-checkbox
         *ngIf="isCheckbox"
@@ -55,7 +55,7 @@
         [disabled]="disabled"
         [required]="required"
         [(ngModel)]="value"
-        (change)="validations()"
+        (onChange)="validations()"
       ></p-checkbox>
       <p-chips
         *ngIf="isStringList"
@@ -64,16 +64,29 @@
         [class]="styleClass"
         [disabled]="disabled"
         [required]="required"
-        (change)="validations()"
-        (keyup)="validations()"
+        (onChipClick)="validations()"
+        (onAdd)="validations()"
+        (onRemove)="validations()"
       ></p-chips>
       <p-inputSwitch
         *ngIf="isSwitchInput"
-        (change)="validations()"
+        (onChange)="validations()"
         [disabled]="disabled"
         [required]="required"
         [(ngModel)]="value"
       ></p-inputSwitch>
+      <div *ngIf="isRadioButton" class="p-field-checkbox">
+        <div *ngFor="let radioButton of listRadioButtons" class="p-field-radiobutton">
+          <p-radioButton
+            [value]="radioButton"
+            [(ngModel)]="value"
+            (onClick)="validations()"
+            [disabled]="disabled"
+            [required]="required"
+            [label]="radioButton"
+          ></p-radioButton>
+        </div>
+      </div>
     </div>
     <small *ngIf="showSmall">{{ labelSmall }}</small>
   </div>
