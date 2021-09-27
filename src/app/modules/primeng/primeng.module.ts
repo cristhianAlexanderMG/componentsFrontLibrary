@@ -21,6 +21,7 @@ import {ChipsModule} from 'primeng/chips';
 import {InputSwitchModule} from 'primeng/inputswitch';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {ToggleButtonModule} from 'primeng/togglebutton';
+import {SplitButtonModule} from 'primeng/splitbutton';
 
 @NgModule({
   declarations: [],
@@ -45,7 +46,8 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     ChipsModule,
     InputSwitchModule,
     RadioButtonModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    SplitButtonModule
   ],
   exports: [
     CommonModule,
@@ -68,7 +70,8 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     ChipsModule,
     InputSwitchModule,
     RadioButtonModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    SplitButtonModule
   ]
 })
 export class PrimengModule { }

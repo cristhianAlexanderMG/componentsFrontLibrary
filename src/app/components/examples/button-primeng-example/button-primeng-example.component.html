@@ -127,6 +127,13 @@
         </div>
       </div>
     </p-accordionTab>
+    <p-accordionTab header="With Options">
+      <app-button-primeng
+        [label]="'With Options'"
+        [withMenu]="true"
+        [optionsMenu]="itemsButton"
+      ></app-button-primeng>
+    </p-accordionTab>
     <p-accordionTab header="With Badge">
       <app-button-primeng
         [label]="'With Badge'"

@@ -43,6 +43,12 @@ export class ButtonPrimengComponent implements OnInit {
   // Size button
   @Input() size: string = EnumerablesTypesApp.enumSize.Small;
 
+  // Button with options
+  @Input() withMenu: boolean = false;
+
+  // Options by button
+  @Input() optionsMenu: any = [];
+
   @Output() onClick = new EventEmitter<void>();
 
   styleClass: string = '';
