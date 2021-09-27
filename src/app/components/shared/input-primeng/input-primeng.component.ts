@@ -65,6 +65,9 @@ export class InputPrimengComponent implements OnInit {
   // Check if is Checkbox
   @Input() isCheckbox: boolean = false;
 
+  // Check if is Checkbox Button
+  @Input() isCheckboxButton: boolean = false;
+
   // Check if is disabled
   @Input() disabled: boolean = false;
 
@@ -97,7 +100,7 @@ export class InputPrimengComponent implements OnInit {
 
   ngOnInit(): void {
     this.identifySizeOfTheInput();
-    if (this.isCheckbox || this.isSwitchInput) {
+    if (this.isCheckbox || this.isSwitchInput || this.isCheckboxButton) {
       this.toBinary(this.value);
     }
   }

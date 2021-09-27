@@ -6,7 +6,7 @@
       <i class="{{ icon }}"></i>
     </span>
       <input
-        *ngIf="!isTextArea && !isUploadFile && !isEditor && !isRadioButton && !isCheckbox && !isStringList && !isSwitchInput"
+        *ngIf="!isTextArea && !isUploadFile && !isCheckboxButton && !isEditor && !isRadioButton && !isCheckbox && !isStringList && !isSwitchInput"
         (change)="validations()"
         (keyup)="validations()"
         [type]="type"
@@ -57,6 +57,18 @@
         [(ngModel)]="value"
         (onChange)="validations()"
       ></p-checkbox>
+      <p-toggleButton
+        *ngIf="isCheckboxButton"
+        [(ngModel)]="value"
+        onLabel="Confirm"
+        offLabel="Reject"
+        onIcon="pi pi-check"
+        offIcon="pi pi-times"
+        [disabled]="disabled"
+        [required]="required"
+        (onChange)="validations()"
+        [style]="{'width': '10em'}"
+      ></p-toggleButton>
       <p-chips
         *ngIf="isStringList"
         [style]="{width:'100%'}"
