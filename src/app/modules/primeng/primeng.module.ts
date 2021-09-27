@@ -18,6 +18,7 @@ import {FileUploadModule} from 'primeng/fileupload';
 import {HttpClientModule} from '@angular/common/http';
 import {CheckboxModule} from 'primeng/checkbox';
 import {ChipsModule} from 'primeng/chips';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [],
@@ -39,7 +40,8 @@ import {ChipsModule} from 'primeng/chips';
     FileUploadModule,
     HttpClientModule,
     CheckboxModule,
-    ChipsModule
+    ChipsModule,
+    InputSwitchModule
   ],
   exports: [
     CommonModule,
@@ -59,7 +61,8 @@ import {ChipsModule} from 'primeng/chips';
     FileUploadModule,
     HttpClientModule,
     CheckboxModule,
-    ChipsModule
+    ChipsModule,
+    InputSwitchModule
   ]
 })
 export class PrimengModule { }

@@ -6,7 +6,7 @@
       <i class="{{ icon }}"></i>
     </span>
       <input
-        *ngIf="!isTextArea && !isUploadFile && !isEditor && !isCheckbox && !isStringList"
+        *ngIf="!isTextArea && !isUploadFile && !isEditor && !isCheckbox && !isStringList && !isSwitchInput"
         (change)="validations()"
         (keyup)="validations()"
         [type]="type"
@@ -52,6 +52,8 @@
       <p-checkbox
         *ngIf="isCheckbox"
         [binary]="true"
+        [disabled]="disabled"
+        [required]="required"
         [(ngModel)]="value"
         (change)="validations()"
       ></p-checkbox>
@@ -65,6 +67,13 @@
         (change)="validations()"
         (keyup)="validations()"
       ></p-chips>
+      <p-inputSwitch
+        *ngIf="isSwitchInput"
+        (change)="validations()"
+        [disabled]="disabled"
+        [required]="required"
+        [(ngModel)]="value"
+      ></p-inputSwitch>
     </div>
     <small *ngIf="showSmall">{{ labelSmall }}</small>
   </div>

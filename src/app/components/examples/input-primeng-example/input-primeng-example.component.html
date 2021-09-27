@@ -135,11 +135,24 @@
       ></app-input-primeng>
     </p-accordionTab>
     <p-accordionTab header="Checkbox">
-      <app-input-primeng
-        [label]="'Checkbox'"
-        [isCheckbox]="true"
-        [value]="true"
-      ></app-input-primeng>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Basic'"
+              [isCheckbox]="true"
+              [value]="true"
+            ></app-input-primeng>
+          </div>
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Switch'"
+              [isSwitchInput]="true"
+              [value]="true"
+            ></app-input-primeng>
+          </div>
+        </div>
+      </div>
     </p-accordionTab>
     <p-accordionTab header="String List">
       <app-input-primeng

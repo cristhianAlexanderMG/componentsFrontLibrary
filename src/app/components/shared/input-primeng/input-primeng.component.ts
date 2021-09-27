@@ -47,6 +47,9 @@ export class InputPrimengComponent implements OnInit {
   // Check if is UploadFile
   @Input() isUploadFile: boolean = false;
 
+  // Check if is Switch Input
+  @Input() isSwitchInput: boolean = false;
+
   // Check if is Editor
   @Input() isEditor: boolean = false;
 
@@ -88,7 +91,7 @@ export class InputPrimengComponent implements OnInit {
 
   ngOnInit(): void {
     this.identifySizeOfTheInput();
-    if (this.isCheckbox) {
+    if (this.isCheckbox || this.isSwitchInput) {
       this.toBinary(this.value);
     }
   }
