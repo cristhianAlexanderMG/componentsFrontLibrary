@@ -18,7 +18,87 @@ export class UtilsService {
         {
           id: 2,
           name: 'Type 2'
-        }
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
+        {
+          id: 1,
+          name: 'Type 1'
+        },
+        {
+          id: 2,
+          name: 'Type 2'
+        },
       ],
       status: EnumerablesTypesApp.enumStatusResponseData.success
     };

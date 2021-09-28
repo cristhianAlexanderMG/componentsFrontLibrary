@@ -1,10 +1,24 @@
 <div class="container">
   <p-toolbar>
     <ng-template pTemplate="left">
-      <app-word-primeng
-        [value]="titleTable"
-        [type]="enumTypeWord.Subtitle"
-      ></app-word-primeng>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <app-word-primeng
+              [value]="titleTable"
+              [type]="enumTypeWord.Subtitle"
+              [alignment]="enumTypeAlignment.Start"
+            ></app-word-primeng>
+          </div>
+          <div class="col-12">
+            <app-word-primeng
+              [value]="messageTotalRecords"
+              [type]="enumTypeWord.Normal"
+              [alignment]="enumTypeAlignment.Start"
+            ></app-word-primeng>
+          </div>
+        </div>
+      </div>
     </ng-template>
 
     <ng-template pTemplate="right">
@@ -22,6 +36,12 @@
         [loading]="loading"
         (onClick)="exportData()"
       ></app-button-primeng>
+      <app-button-primeng
+        [label]="nameButton5"
+        [icon]="icon5"
+        [loading]="loading"
+        (onClick)="refresh()"
+      ></app-button-primeng>
     </ng-template>
   </p-toolbar>
   <p-table
@@ -35,6 +55,9 @@
     [(selection)]="selectedObject"
     (onRowSelect)="onRowSelect()"
     (onRowUnselect)="onRowUnselect()"
+    responsiveLayout="scroll"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} records"
   >
     <ng-template pTemplate="header">
       <tr>
@@ -72,13 +95,8 @@
         </td>
       </tr>
     </ng-template>
-    <ng-template pTemplate="summary">
-      <div class="p-d-flex p-ai-center p-jc-between">
-        <app-word-primeng
-          [value]="messageTotalRecords"
-          [alignment]="enumTypeAlignment.Start"
-        ></app-word-primeng>
-      </div>
+    <ng-template pTemplate="paginatorleft">
+      <p-button type="button" icon="{{icon6}}" styleClass="p-button-text"></p-button>
     </ng-template>
   </p-table>
 </div>

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EnumerablesTypesApp} from "../../../models/enumerablesTypesApp";
+import {EnumerableIconsPrimeng} from "../../../models/enumerableIconsPrimeng";
 
 @Component({
   selector: 'app-table-primeng',
@@ -24,6 +25,7 @@ export class TablePrimengComponent implements OnInit {
   @Input() loading: boolean = false;
 
   @Output() returnValue = new EventEmitter<any>();
+  @Output() returnRefreshData = new EventEmitter<any>();
 
   visibleModal: boolean = false;
   selectedObject: any = null;
@@ -40,10 +42,14 @@ export class TablePrimengComponent implements OnInit {
   icon2: string = '';
   icon3: string = '';
   icon4: string = '';
+  icon5: string = '';
+  icon6: string = '';
   nameButton1: string = '';
   nameButton2: string = '';
   nameButton3: string = '';
   nameButton4: string = '';
+  nameButton5: string = '';
+  nameButton6: string = '';
   disabledButtonModal: boolean = true;
 
   enumTypeAlignment = EnumerablesTypesApp.enumTypeAlignment;
@@ -51,36 +57,44 @@ export class TablePrimengComponent implements OnInit {
   enumTypeColumnTable = EnumerablesTypesApp.enumTypeColumnTable;
   enumTypeInput = EnumerablesTypesApp.enumTypeInput;
 
+  customers: any;
+  first = 0;
+  rows = 10;
+
   ngOnInit(): void {
     this.buildTable();
   }
 
   private buildTable(): void {
     this.loading = true;
-    this.icon1 = 'pi pi-plus-circle';
-    this.icon2 = 'pi pi-download';
-    this.icon3 = 'pi pi-check-circle';
-    this.icon4 = 'pi pi-times-circle';
-    this.nameButton1 = 'Nuevo';
-    this.nameButton2 = 'Exportar';
-    this.nameButton3 = 'Aceptar';
-    this.nameButton4 = 'Cancelar';
+    this.icon1 = EnumerableIconsPrimeng.icon.plusCircle;
+    this.icon2 = EnumerableIconsPrimeng.icon.download;
+    this.icon3 = EnumerableIconsPrimeng.icon.checkMinus;
+    this.icon4 = EnumerableIconsPrimeng.icon.timesMinus;
+    this.icon5 = EnumerableIconsPrimeng.icon.refresh;
+    this.icon6 = EnumerableIconsPrimeng.icon.infoCircle;
+    this.nameButton1 = 'Create';
+    this.nameButton2 = 'Download';
+    this.nameButton3 = 'Accept';
+    this.nameButton4 = 'Cancel';
+    this.nameButton5 = 'Refresh';
+    this.nameButton6 = '';
     this.selectionMode = 'single';
     this.styleClass = 'p-datatable-sm p-datatable-gridlines p-datatable-striped';
     this.totalRecords = this.data.length;
-    this.messageTotalRecords = 'Cantidad de registros: ' + this.totalRecords;
+    this.messageTotalRecords = 'Total records: ' + this.totalRecords;
     this.selectedObject = Object.assign({}, this.objectExample);
     this.rowsPerPageOptions = [5, 10, 50, 100];
     this.loading = false;
   }
 
   onRowSelect() {
-    this.nameButton1 = 'Editar';
+    this.nameButton1 = 'Modify';
     this.icon1 = 'pi pi-pencil';
   }
 
   onRowUnselect() {
-    this.nameButton1 = 'Nuevo';
+    this.nameButton1 = 'Create';
     this.icon1 = 'pi pi-plus-circle';
     this.selectedObject = Object.assign({}, this.objectExample);
   }
@@ -102,8 +116,7 @@ export class TablePrimengComponent implements OnInit {
     this.closeModal();
   }
 
-  exportData() {
-  }
+  exportData() {}
 
   validateReturnValue(field: string, value: any, type: string) {
     switch (type) {
@@ -167,4 +180,13 @@ export class TablePrimengComponent implements OnInit {
     });
     return objectReturn;
   }
+
+  refresh() {
+    this.returnRefreshData.emit();
+  }
+
+  moreInfo() {}
+
+
+
 }

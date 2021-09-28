@@ -16,6 +16,14 @@ export abstract class EnumerableIconsPrimeng {
     eyeSlash: 'pi pi-eye-slash',
     plusCircle: 'pi pi-plus-circle',
     plusMinus: 'pi pi-minus-circle',
+    download: 'pi pi-download',
+    checkMinus: 'pi pi-check-circle',
+    timesMinus: 'pi pi-times-circle',
+    refresh: 'pi pi-refresh',
+    infoCircle: 'pi pi-info-circle',
+
+
+
 
 
   }
