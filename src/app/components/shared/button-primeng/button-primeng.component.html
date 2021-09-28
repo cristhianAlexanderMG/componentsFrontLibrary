@@ -10,6 +10,8 @@
     styleClass="{{ styleClass }}"
     badgeClass="{{ badgeClass }}"
     badge="{{badge}}"
+    [pTooltip]="labelTooltip"
+    [tooltipPosition]="positionTooltip.toLowerCase()"
   ></p-button>
 
   <p-splitButton
@@ -21,6 +23,8 @@
     styleClass="{{ styleClass }}"
     (onClick)="returnOnClick()"
     [model]="optionsMenu"
+    [pTooltip]="labelTooltip"
+    [tooltipPosition]="positionTooltip.toLowerCase()"
   ></p-splitButton>
 
   <div class="card" *ngIf="buttonCircleFloat">
@@ -31,6 +35,8 @@
         direction="{{positionButtonCircleFloat}}"
         showIcon="{{enumIcon.plusCircle}}"
         hideIcon="{{enumIcon.plusMinus}}"
+        [pTooltip]="labelTooltip"
+        [tooltipPosition]="positionTooltip.toLowerCase()"
       ></p-speedDial>
     </div>
   </div>

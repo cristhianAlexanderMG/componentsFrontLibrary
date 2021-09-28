@@ -23,6 +23,40 @@
         [value]="date"
       ></app-calendar-primeng>
     </p-accordionTab>
+    <p-accordionTab header="With Tooltip">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <app-calendar-primeng
+              [label]="'Top'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Top"
+            ></app-calendar-primeng>
+          </div>
+          <div class="col-6">
+            <app-calendar-primeng
+              [label]="'Bottom'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Bottom"
+            ></app-calendar-primeng>
+          </div>
+          <div class="col-6">
+            <app-calendar-primeng
+              [label]="'Right'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Right"
+            ></app-calendar-primeng>
+          </div>
+          <div class="col-6">
+            <app-calendar-primeng
+              [label]="'Left'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Left"
+            ></app-calendar-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
     <p-accordionTab header="With Small">
       <app-calendar-primeng
         [label]="'With Small'"

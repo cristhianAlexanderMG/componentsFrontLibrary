@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UtilsService} from "../../../services/utils.service";
+import {EnumerablesTypesApp} from "../../../models/enumerablesTypesApp";
 
 @Component({
   selector: 'app-calendar-primeng-example',
@@ -8,5 +9,5 @@ import {UtilsService} from "../../../services/utils.service";
 })
 export class CalendarPrimengExampleComponent {
   date: string = UtilsService.convertDateToCorrectFormat(new Date());
-
+  enumPosition = EnumerablesTypesApp.enumPosition;
 }

@@ -98,6 +98,41 @@
         [withIcon]="true"
       ></app-input-primeng>
     </p-accordionTab>
+    <p-accordionTab header="With Tooltip">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Top'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Top"
+            ></app-input-primeng>
+          </div>
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Bottom'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Bottom"
+            ></app-input-primeng>
+          </div>
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Right'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Right"
+            ></app-input-primeng>
+          </div>
+          <div class="col-6">
+            <app-input-primeng
+              [label]="'Left'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Left"
+            ></app-input-primeng>
+          </div>
+        </div>
+      </div>
+
+    </p-accordionTab>
     <p-accordionTab header="With Range Of Numbers">
       <app-input-primeng
         [label]="'With Range Of Numbers - (Minimum 0 = Maximum 2)'"

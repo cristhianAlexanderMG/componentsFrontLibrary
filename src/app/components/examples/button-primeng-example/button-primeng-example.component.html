@@ -134,6 +134,40 @@
         [optionsMenu]="itemsButton"
       ></app-button-primeng>
     </p-accordionTab>
+    <p-accordionTab header="With Tooltip">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <app-button-primeng
+              [label]="'Top'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Top"
+            ></app-button-primeng>
+          </div>
+          <div class="col-6">
+            <app-button-primeng
+              [label]="'Bottom'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Bottom"
+            ></app-button-primeng>
+          </div>
+          <div class="col-6">
+            <app-button-primeng
+              [label]="'Right'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Right"
+            ></app-button-primeng>
+          </div>
+          <div class="col-6">
+            <app-button-primeng
+              [label]="'Left'"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Left"
+            ></app-button-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
     <p-accordionTab header="Circle Float">
       <app-button-primeng
         [label]="'Circle Float'"

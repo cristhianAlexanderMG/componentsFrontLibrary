@@ -11,6 +11,7 @@ export class InputPrimengExampleComponent {
   enumIcon = EnumerableIconsPrimeng.icon;
   enumTypeInput = EnumerablesTypesApp.enumTypeInput;
   enumSize = EnumerablesTypesApp.enumSize;
+  enumPosition = EnumerablesTypesApp.enumPosition;
 
   date1 = new Date().toLocaleDateString();
   date2 = new Date().toLocaleDateString();

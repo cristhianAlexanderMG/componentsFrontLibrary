@@ -20,6 +20,12 @@ export class InputPrimengComponent implements OnInit {
   // Text of the small
   @Input() labelSmall: string = 'Small';
 
+  // Text of the tooltip
+  @Input() labelTooltip: string = '';
+
+  // Type of position on tooltip
+  @Input() positionTooltip: string = EnumerablesTypesApp.enumPosition.Top;
+
   // Name of icon
   @Input() icon: string = '';
 

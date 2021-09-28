@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
+import {EnumerablesTypesApp} from "../../../models/enumerablesTypesApp";
 
 @Component({
   selector: 'app-calendar-primeng',
@@ -20,6 +21,12 @@ export class CalendarPrimengComponent implements OnChanges {
 
   // Check if selected with time
   @Input() withTime: boolean = false;
+
+  // Text of the tooltip
+  @Input() labelTooltip: string = '';
+
+  // Type of position on tooltip
+  @Input() positionTooltip: string = EnumerablesTypesApp.enumPosition.Top;
 
   // Check if is disabled
   @Input() disabled: boolean = false;

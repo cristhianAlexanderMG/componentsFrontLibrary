@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {EnumerablesTypesApp} from "../../../models/enumerablesTypesApp";
 
 @Component({
   selector: 'app-dropdown-primeng',
@@ -23,6 +24,12 @@ export class DropdownPrimengComponent {
 
   // If element is required
   @Input() required: boolean = false;
+
+  // Text of the tooltip
+  @Input() labelTooltip: string = '';
+
+  // Type of position on tooltip
+  @Input() positionTooltip: string = EnumerablesTypesApp.enumPosition.Top;
 
   // Return of complete element
   @Output() returnValue = new EventEmitter<any>();

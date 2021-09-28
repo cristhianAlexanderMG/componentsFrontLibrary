@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {UtilsService} from "../../../services/utils.service";
+import {EnumerablesTypesApp} from "../../../models/enumerablesTypesApp";
 
 @Component({
   selector: 'app-dropdown-primeng-example',
@@ -18,4 +19,6 @@ export class DropdownPrimengExampleComponent {
   };
 
   list = UtilsService.getDataExample().data;
+
+  enumPosition = EnumerablesTypesApp.enumPosition;
 }

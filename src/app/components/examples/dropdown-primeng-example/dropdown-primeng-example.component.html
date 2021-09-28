@@ -8,6 +8,52 @@
         [objectSelected]="objectExample"
       ></app-dropdown-primeng>
     </p-accordionTab>
+    <p-accordionTab header="With Tooltip">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <app-dropdown-primeng
+              [nameLabel]="'Top'"
+              [list]="list"
+              [labelSelected]="'name'"
+              [objectSelected]="objectExample"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Top"
+            ></app-dropdown-primeng>
+          </div>
+          <div class="col-6">
+            <app-dropdown-primeng
+              [nameLabel]="'Bottom'"
+              [list]="list"
+              [labelSelected]="'name'"
+              [objectSelected]="objectExample"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Bottom"
+            ></app-dropdown-primeng>
+          </div>
+          <div class="col-6">
+            <app-dropdown-primeng
+              [nameLabel]="'Right'"
+              [list]="list"
+              [labelSelected]="'name'"
+              [objectSelected]="objectExample"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Right"
+            ></app-dropdown-primeng>
+          </div>
+          <div class="col-6">
+            <app-dropdown-primeng
+              [nameLabel]="'Left'"
+              [list]="list"
+              [labelSelected]="'name'"
+              [objectSelected]="objectExample"
+              [labelTooltip]="'Tooltip'"
+              [positionTooltip]="enumPosition.Left"
+            ></app-dropdown-primeng>
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
     <p-accordionTab header="With Value Selected">
       <app-dropdown-primeng
         [nameLabel]="'With Value Selected'"

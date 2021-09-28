@@ -56,6 +56,12 @@ export class ButtonPrimengComponent implements OnInit {
   // Options by button
   @Input() optionsMenu: any = [];
 
+  // Text of the tooltip
+  @Input() labelTooltip: string = '';
+
+  // Type of position on tooltip
+  @Input() positionTooltip: string = EnumerablesTypesApp.enumPosition.Top;
+
   @Output() onClick = new EventEmitter<void>();
 
   styleClass: string = '';

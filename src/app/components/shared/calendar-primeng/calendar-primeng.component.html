@@ -10,6 +10,8 @@
         [disabled]="disabled"
         [readonlyInput]="true"
         [required]="required"
+        [pTooltip]="labelTooltip"
+        [tooltipPosition]="positionTooltip.toLowerCase()"
         [class]="styleClass"
         (onSelect)="validations()"
       ></p-calendar>
