@@ -1,1 +1,12 @@
-<p-menubar [model]="items" [style]="{'border-radius': '0px', 'border': 'none'}"></p-menubar>
+<p-menubar [model]="items">
+  <ng-template pTemplate="end">
+    <span>Fri 13:07</span>
+  </ng-template>
+</p-menubar>
+<div class="dock-window dock-advanced">
+  <p-dock [model]="dockItems" position="left">
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item.icon" [alt]="item.label" width="100%">
+    </ng-template>
+  </p-dock>
+</div>

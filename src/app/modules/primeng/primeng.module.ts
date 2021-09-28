@@ -24,6 +24,7 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
 import {SplitButtonModule} from 'primeng/splitbutton';
 import {SpeedDialModule} from 'primeng/speeddial';
 import {TooltipModule} from 'primeng/tooltip';
+import {DockModule} from 'primeng/dock';
 
 @NgModule({
   declarations: [],
@@ -51,7 +52,8 @@ import {TooltipModule} from 'primeng/tooltip';
     ToggleButtonModule,
     SplitButtonModule,
     SpeedDialModule,
-    TooltipModule
+    TooltipModule,
+    DockModule
   ],
   exports: [
     CommonModule,
@@ -77,7 +79,8 @@ import {TooltipModule} from 'primeng/tooltip';
     ToggleButtonModule,
     SplitButtonModule,
     SpeedDialModule,
-    TooltipModule
+    TooltipModule,
+    DockModule
   ]
 })
 export class PrimengModule { }
