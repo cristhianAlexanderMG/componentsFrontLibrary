@@ -25,6 +25,9 @@ import {SplitButtonModule} from 'primeng/splitbutton';
 import {SpeedDialModule} from 'primeng/speeddial';
 import {TooltipModule} from 'primeng/tooltip';
 import {DockModule} from 'primeng/dock';
+import {AvatarModule} from 'primeng/avatar';
+import {AvatarGroupModule} from 'primeng/avatargroup';
+import {BadgeModule} from 'primeng/badge';
 
 @NgModule({
   declarations: [],
@@ -53,7 +56,10 @@ import {DockModule} from 'primeng/dock';
     SplitButtonModule,
     SpeedDialModule,
     TooltipModule,
-    DockModule
+    DockModule,
+    AvatarModule,
+    AvatarGroupModule,
+    BadgeModule
   ],
   exports: [
     CommonModule,
@@ -80,7 +86,10 @@ import {DockModule} from 'primeng/dock';
     SplitButtonModule,
     SpeedDialModule,
     TooltipModule,
-    DockModule
+    DockModule,
+    AvatarModule,
+    AvatarGroupModule,
+    BadgeModule
   ]
 })
 export class PrimengModule { }

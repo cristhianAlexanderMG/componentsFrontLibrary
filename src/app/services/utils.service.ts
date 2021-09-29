@@ -20,84 +20,84 @@ export class UtilsService {
           name: 'Type 2'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 3,
+          name: 'Type 3'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 4,
+          name: 'Type 4'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 5,
+          name: 'Type 5'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 6,
+          name: 'Type 6'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 7,
+          name: 'Type 7'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 8,
+          name: 'Type 8'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 9,
+          name: 'Type 9'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 10,
+          name: 'Type 10'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 11,
+          name: 'Type 11'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 12,
+          name: 'Type 12'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 13,
+          name: 'Type 13'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 14,
+          name: 'Type 14'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 15,
+          name: 'Type 15'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 16,
+          name: 'Type 16'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 17,
+          name: 'Type 17'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 18,
+          name: 'Type 18'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 19,
+          name: 'Type 19'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 20,
+          name: 'Type 20'
         },
         {
-          id: 1,
-          name: 'Type 1'
+          id: 21,
+          name: 'Type 21'
         },
         {
-          id: 2,
-          name: 'Type 2'
+          id: 22,
+          name: 'Type 22'
         },
       ],
       status: EnumerablesTypesApp.enumStatusResponseData.success

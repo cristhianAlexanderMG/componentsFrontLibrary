@@ -117,24 +117,6 @@ export class MenuComponent {
           positionLeft: 15
         },
         icon: "assets/showcase/images/dock/safari.svg"
-      },
-      {
-        label: 'Photos',
-        tooltipOptions: {
-          tooltipLabel: "Photos",
-          tooltipPosition: 'top',
-          positionTop: -15,
-          positionLeft: 15
-        },
-        icon: "assets/showcase/images/dock/photos.svg"
-      },
-      {
-        label: 'GitHub',
-        icon: "assets/showcase/images/dock/github.svg",
-      },
-      {
-        label: 'Trash',
-        icon: "assets/showcase/images/dock/trash.png"
       }
     ];
   }
