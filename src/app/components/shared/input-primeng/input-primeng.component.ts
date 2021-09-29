@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EnumerablesTypesApp} from "../../../models/enumerablesTypesApp";
 import {UtilsService} from "../../../services/utils.service";
+import {EnumerableIconsPrimeng} from "../../../models/enumerableIconsPrimeng";
 
 @Component({
   selector: 'app-input-primeng',
@@ -15,10 +16,10 @@ export class InputPrimengComponent implements OnInit {
   @Input() listRadioButtons: any = [];
 
   // Name of input
-  @Input() label: string = 'Label';
+  @Input() label: string = '';
 
   // Text of the small
-  @Input() labelSmall: string = 'Small';
+  @Input() labelSmall: string = '';
 
   // Text of the tooltip
   @Input() labelTooltip: string = '';
@@ -28,6 +29,9 @@ export class InputPrimengComponent implements OnInit {
 
   // Name of icon
   @Input() icon: string = '';
+
+  // Name of icon on the button
+  @Input() iconButton: string = EnumerableIconsPrimeng.icon.refresh;
 
   // Type of input
   @Input() type: string = EnumerablesTypesApp.enumTypeInput.Text;
@@ -46,6 +50,9 @@ export class InputPrimengComponent implements OnInit {
 
   // Check if show icon
   @Input() withIcon: boolean = false;
+
+  // Check if show button
+  @Input() withButton: boolean = false;
 
   // Check if is required
   @Input() required: boolean = false;
@@ -94,6 +101,9 @@ export class InputPrimengComponent implements OnInit {
 
   // Object to return to Upload File
   @Output() returnUploadFile = new EventEmitter<any>();
+
+  // Object to return to OnClick Event
+  @Output() returnOnClick = new EventEmitter<any>();
 
   // Style class
   styleClass: string = '';
@@ -242,6 +252,10 @@ export class InputPrimengComponent implements OnInit {
       this.uploadedFiles.push(file);
     }
     this.returnUploadFile.emit(this.uploadedFiles);
+  }
+
+  onClick() {
+    this.returnOnClick.emit();
   }
 
   toBinary(value: any) {

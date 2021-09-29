@@ -1,44 +1,42 @@
-<div class="col-12 m-1 d-flex justify-content-center align-items-center">
-  <p-button
-    *ngIf="!withMenu && !buttonCircleFloat"
-    [disabled]="disabled"
-    [loading]="loading"
-    (onClick)="returnOnClick()"
-    label="{{ label }}"
-    icon="{{ icon }}"
-    iconPos="{{ iconPos }}"
-    styleClass="{{ styleClass }}"
-    badgeClass="{{ badgeClass }}"
-    badge="{{badge}}"
-    [pTooltip]="labelTooltip"
-    [tooltipPosition]="positionTooltip.toLowerCase()"
-  ></p-button>
+<p-button
+  *ngIf="!withMenu && !buttonCircleFloat"
+  [disabled]="disabled"
+  [loading]="loading"
+  (onClick)="returnOnClick()"
+  label="{{ label }}"
+  icon="{{ icon }}"
+  iconPos="{{ iconPos }}"
+  styleClass="{{ styleClass }}"
+  badgeClass="{{ badgeClass }}"
+  badge="{{badge}}"
+  [pTooltip]="labelTooltip"
+  [tooltipPosition]="positionTooltip.toLowerCase()"
+></p-button>
 
-  <p-splitButton
-    *ngIf="withMenu"
-    [disabled]="disabled"
-    label="{{ label }}"
-    icon="{{ icon }}"
-    iconPos="{{ iconPos }}"
-    styleClass="{{ styleClass }}"
-    (onClick)="returnOnClick()"
-    [model]="optionsMenu"
-    [pTooltip]="labelTooltip"
-    [tooltipPosition]="positionTooltip.toLowerCase()"
-  ></p-splitButton>
+<p-splitButton
+  *ngIf="withMenu"
+  [disabled]="disabled"
+  label="{{ label }}"
+  icon="{{ icon }}"
+  iconPos="{{ iconPos }}"
+  styleClass="{{ styleClass }}"
+  (onClick)="returnOnClick()"
+  [model]="optionsMenu"
+  [pTooltip]="labelTooltip"
+  [tooltipPosition]="positionTooltip.toLowerCase()"
+></p-splitButton>
 
-  <div class="card" *ngIf="buttonCircleFloat">
-    <div style="height: 350px; position: relative;" class="speeddial-delay-demo">
-      <p-speedDial
-        [model]="optionsMenu"
-        [transitionDelay]="100"
-        direction="{{positionButtonCircleFloat}}"
-        showIcon="{{enumIcon.plusCircle}}"
-        hideIcon="{{enumIcon.plusMinus}}"
-        [pTooltip]="labelTooltip"
-        [tooltipPosition]="positionTooltip.toLowerCase()"
-      ></p-speedDial>
-    </div>
+<div class="card" *ngIf="buttonCircleFloat">
+  <div style="height: 350px; position: relative;" class="speeddial-delay-demo">
+    <p-speedDial
+      [model]="optionsMenu"
+      [transitionDelay]="100"
+      direction="{{positionButtonCircleFloat}}"
+      showIcon="{{enumIcon.plusCircle}}"
+      hideIcon="{{enumIcon.plusMinus}}"
+      [pTooltip]="labelTooltip"
+      [tooltipPosition]="positionTooltip.toLowerCase()"
+    ></p-speedDial>
   </div>
 </div>
 

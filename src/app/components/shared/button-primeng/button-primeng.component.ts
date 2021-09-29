@@ -64,7 +64,7 @@ export class ButtonPrimengComponent implements OnInit {
 
   @Output() onClick = new EventEmitter<void>();
 
-  styleClass: string = '';
+  styleClass: string = 'm-1 ';
   badgeClass: string = '';
   iconPos: string = '';
 

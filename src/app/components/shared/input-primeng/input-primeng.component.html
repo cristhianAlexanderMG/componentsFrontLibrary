@@ -17,6 +17,15 @@
         [pTooltip]="labelTooltip"
         [tooltipPosition]="positionTooltip.toLowerCase()"
         pInputText/>
+      <button
+        *ngIf="withButton"
+        type="button"
+        pButton
+        pRipple
+        icon="{{iconButton}}"
+        (click)="onClick()"
+        styleClass="p-button-warn"
+      ></button>
       <textarea
         *ngIf="isTextArea"
         rows="5"

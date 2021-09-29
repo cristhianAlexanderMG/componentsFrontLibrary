@@ -27,11 +27,16 @@ export class TablePrimengComponent implements OnInit {
   @Output() returnValue = new EventEmitter<any>();
   @Output() returnRefreshData = new EventEmitter<any>();
 
+  searchWord: string = '';
+  visibleInputToSearch: boolean = false;
+
   visibleModal: boolean = false;
   selectedObject: any = null;
 
   totalRecords: number = 0;
+  dateLastUpdate: string = new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString();
   messageTotalRecords: string = '';
+  messageLastUpdate: string = '';
   rowsPerPageOptions: any = [];
 
   styleClass: string = '';
@@ -44,12 +49,14 @@ export class TablePrimengComponent implements OnInit {
   icon4: string = '';
   icon5: string = '';
   icon6: string = '';
+  icon7: string = '';
   nameButton1: string = '';
   nameButton2: string = '';
   nameButton3: string = '';
   nameButton4: string = '';
   nameButton5: string = '';
   nameButton6: string = '';
+  nameButton7: string = '';
   disabledButtonModal: boolean = true;
 
   enumTypeAlignment = EnumerablesTypesApp.enumTypeAlignment;
@@ -73,16 +80,19 @@ export class TablePrimengComponent implements OnInit {
     this.icon4 = EnumerableIconsPrimeng.icon.timesMinus;
     this.icon5 = EnumerableIconsPrimeng.icon.refresh;
     this.icon6 = EnumerableIconsPrimeng.icon.infoCircle;
+    this.icon7 = EnumerableIconsPrimeng.icon.searchPlus;
     this.nameButton1 = 'Create';
     this.nameButton2 = 'Download';
     this.nameButton3 = 'Accept';
     this.nameButton4 = 'Cancel';
     this.nameButton5 = 'Refresh';
     this.nameButton6 = '';
+    this.nameButton7 = '';
     this.selectionMode = 'single';
     this.styleClass = 'p-datatable-sm p-datatable-gridlines p-datatable-striped';
     this.totalRecords = this.data.length;
-    this.messageTotalRecords = 'Total records: ' + this.totalRecords;
+    this.messageTotalRecords = 'Total Records: ' + this.totalRecords;
+    this.messageLastUpdate = 'Last Update: ' + this.dateLastUpdate;
     this.selectedObject = Object.assign({}, this.objectExample);
     this.rowsPerPageOptions = [5, 10, 50, 100];
     this.loading = false;
@@ -187,6 +197,19 @@ export class TablePrimengComponent implements OnInit {
 
   moreInfo() {}
 
+  clearTableWithFilter(event: any) {
+    event.clear();
+    this.searchWord = '';
+  }
 
+  showInputToSearch() {
+    if (this.visibleInputToSearch) {
+      this.visibleInputToSearch = false;
+      this.icon7 = EnumerableIconsPrimeng.icon.searchPlus;
+    } else {
+      this.visibleInputToSearch = true;
+      this.icon7 = EnumerableIconsPrimeng.icon.searchMinus;
+    }
+  }
 
 }

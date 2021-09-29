@@ -1,50 +1,6 @@
 <div class="container">
-  <p-toolbar>
-    <ng-template pTemplate="left">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <app-word-primeng
-              [value]="titleTable"
-              [type]="enumTypeWord.Subtitle"
-              [alignment]="enumTypeAlignment.Start"
-            ></app-word-primeng>
-          </div>
-          <div class="col-12">
-            <app-word-primeng
-              [value]="messageTotalRecords"
-              [type]="enumTypeWord.Normal"
-              [alignment]="enumTypeAlignment.Start"
-            ></app-word-primeng>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template pTemplate="right">
-      <app-button-primeng
-        *ngIf="itIsUpdatable"
-        [label]="nameButton1"
-        [icon]="icon1"
-        [loading]="loading"
-        (onClick)="openModal()"
-      ></app-button-primeng>
-      <app-button-primeng
-        *ngIf="itIsDownloadable"
-        [label]="nameButton2"
-        [icon]="icon2"
-        [loading]="loading"
-        (onClick)="exportData()"
-      ></app-button-primeng>
-      <app-button-primeng
-        [label]="nameButton5"
-        [icon]="icon5"
-        [loading]="loading"
-        (onClick)="refresh()"
-      ></app-button-primeng>
-    </ng-template>
-  </p-toolbar>
   <p-table
+    #dt1
     [value]="data"
     [styleClass]="styleClass"
     [paginator]="true"
@@ -52,6 +8,7 @@
     [loading]="loading"
     [rows]="rowsPerPageOptions[0]"
     [selectionMode]="selectionMode"
+    [columns]="columns"
     [(selection)]="selectedObject"
     (onRowSelect)="onRowSelect()"
     (onRowUnselect)="onRowUnselect()"
@@ -59,6 +16,70 @@
     [showCurrentPageReport]="true"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} records"
   >
+    <ng-template pTemplate="caption">
+      <p-toolbar>
+        <ng-template pTemplate="left">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <app-word-primeng
+                  [value]="titleTable"
+                  [type]="enumTypeWord.Subtitle"
+                  [alignment]="enumTypeAlignment.Start"
+                ></app-word-primeng>
+              </div>
+              <div class="col-12">
+                <app-word-primeng
+                  [value]="messageTotalRecords"
+                  [type]="enumTypeWord.Normal"
+                  [alignment]="enumTypeAlignment.Start"
+                ></app-word-primeng>
+                <app-word-primeng
+                  [value]="messageLastUpdate"
+                  [type]="enumTypeWord.Normal"
+                  [alignment]="enumTypeAlignment.Start"
+                ></app-word-primeng>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <span class="p-input-icon-left p-ml-auto" *ngIf="visibleInputToSearch">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" [(ngModel)]="searchWord"
+                           (input)="dt1.filterGlobal(searchWord, 'contains')"
+                           placeholder="Search keyword"/>
+                </span>
+          <app-button-primeng
+            [label]="nameButton7"
+            [icon]="icon7"
+            [loading]="loading"
+            (onClick)="showInputToSearch()"
+          ></app-button-primeng>
+          <app-button-primeng
+            *ngIf="itIsUpdatable"
+            [label]="nameButton1"
+            [icon]="icon1"
+            [loading]="loading"
+            (onClick)="openModal()"
+          ></app-button-primeng>
+          <app-button-primeng
+            *ngIf="itIsDownloadable"
+            [label]="nameButton2"
+            [icon]="icon2"
+            [loading]="loading"
+            (onClick)="exportData()"
+          ></app-button-primeng>
+          <app-button-primeng
+            [label]="nameButton5"
+            [icon]="icon5"
+            [loading]="loading"
+            (onClick)="refresh()"
+          ></app-button-primeng>
+        </ng-template>
+      </p-toolbar>
+    </ng-template>
     <ng-template pTemplate="header">
       <tr>
         <th *ngFor="let col of columns" pSortableColumn="{{col.field}}">

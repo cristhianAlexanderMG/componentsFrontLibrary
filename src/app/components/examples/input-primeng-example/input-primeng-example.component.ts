@@ -15,4 +15,6 @@ export class InputPrimengExampleComponent {
 
   date1 = new Date().toLocaleDateString();
   date2 = new Date().toLocaleDateString();
+
+  returnClick(event: any) {}
 }

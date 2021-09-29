@@ -91,6 +91,13 @@
         [showSmall]="true"
       ></app-input-primeng>
     </p-accordionTab>
+    <p-accordionTab header="With Button">
+      <app-input-primeng
+        [label]="'With Button'"
+        [withButton]="true"
+        (returnOnClick)="returnClick($event)"
+      ></app-input-primeng>
+    </p-accordionTab>
     <p-accordionTab header="With Icon">
       <app-input-primeng
         [label]="'With Icon'"
