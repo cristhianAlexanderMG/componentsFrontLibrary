@@ -28,6 +28,7 @@ import {DockModule} from 'primeng/dock';
 import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
 import {BadgeModule} from 'primeng/badge';
+import {PanelMenuModule} from 'primeng/panelmenu';
 
 @NgModule({
   declarations: [],
@@ -59,7 +60,8 @@ import {BadgeModule} from 'primeng/badge';
     DockModule,
     AvatarModule,
     AvatarGroupModule,
-    BadgeModule
+    BadgeModule,
+    PanelMenuModule
   ],
   exports: [
     CommonModule,
@@ -89,7 +91,8 @@ import {BadgeModule} from 'primeng/badge';
     DockModule,
     AvatarModule,
     AvatarGroupModule,
-    BadgeModule
+    BadgeModule,
+    PanelMenuModule
   ]
 })
 export class PrimengModule { }

@@ -1,16 +1,11 @@
 <p-menubar [model]="items">
   <ng-template pTemplate="end">
-    <p-avatar
-      pBadge
-      [value]="'4'"
-      [severity]="'danger'"
-      [image]="'assets/showcase/images/demo/avatar/amyelsner.png'"
+    <p-avatar pBadge [value]="'4'" [severity]="'danger'" [image]="'assets/showcase/images/demo/avatar/amyelsner.png'"
       [style]="{marginTop:'5px', marginRight: '5px', marginBottom: '0px', marginLeft: '0px',
-      paddingTop:'5px', paddingRight: '5px', paddingBottom: '0px', paddingLeft: '0px'}"
-      [size]="'large'"
-    ></p-avatar>
+      paddingTop:'5px', paddingRight: '5px', paddingBottom: '0px', paddingLeft: '0px'}" [size]="'large'"></p-avatar>
   </ng-template>
 </p-menubar>
+
 <div class="dock-window dock-advanced">
   <p-dock [model]="dockItems" position="left">
     <ng-template pTemplate="item" let-item>
@@ -18,3 +13,7 @@
     </ng-template>
   </p-dock>
 </div>
+
+<p-dialog header="Components" [transitionOptions]="'130ms'" [(visible)]="displayFinder" [style]="{width: '50vw'}">
+  <p-panelMenu [model]="itemsDisplayComponents"></p-panelMenu>
+</p-dialog>

@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {MenuItem} from 'primeng/api';
-import {EnumerableIconsPrimeng} from "../../models/enumerableIconsPrimeng";
+import { Component } from '@angular/core';
+import { MenuItem } from 'primeng/api';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,114 +10,71 @@ import {EnumerableIconsPrimeng} from "../../models/enumerableIconsPrimeng";
 export class MenuComponent {
   items: MenuItem[];
   dockItems: MenuItem[];
-
-  displayTerminal: boolean = false;
+  itemsDisplayComponents: MenuItem[];
   displayFinder: boolean = false;
 
-  constructor() {
-    this.items = this.createItemsMenu();
-    this.dockItems = this.createItemsDock();
+  constructor(private menuService: MenuService) {
+    this.items = this.getItemsMenu();
+    this.dockItems = this.getItemsDock();
+    this.itemsDisplayComponents = this.getItemsDisplayComponents();
   }
 
-  createItemsMenu(): any[] {
+  getItemsMenu(): any[] {
+    return this.menuService.getItemsMenuBar();
+  }
+
+  getItemsDock(): any[] {
     return [
       {
         label: 'Home',
-        icon: EnumerableIconsPrimeng.icon.home,
-        routerLink: 'home',
-      },
-      {
-        label: 'Components',
-        icon: EnumerableIconsPrimeng.icon.thLarge,
-        items: [
-          {
-            label: 'Button',
-            icon: EnumerableIconsPrimeng.icon.circleOn,
-            routerLink: 'button'
-          },
-          {
-            label: 'Calendar',
-            icon: EnumerableIconsPrimeng.icon.calendar,
-            routerLink: 'calendar'
-          },
-          {
-            label: 'Dropdown',
-            icon: EnumerableIconsPrimeng.icon.bars,
-            routerLink: 'dropdown'
-          },
-          {
-            label: 'Input',
-            icon: EnumerableIconsPrimeng.icon.minus,
-            routerLink: 'input'
-          },
-          {
-            label: 'Word',
-            icon: EnumerableIconsPrimeng.icon.info,
-            routerLink: 'word'
-          }
-        ]
-      },
-      {
-        label: 'Table CRUD',
-        icon: EnumerableIconsPrimeng.icon.table,
-        routerLink: 'table'
-      },
-      {
-        label: 'Themes',
-        icon: EnumerableIconsPrimeng.icon.palette,
-        routerLink: 'themes'
-      }
-    ];
-  }
-
-  createItemsDock(): any[] {
-    return [
-      {
-        label: 'Finder',
         tooltipOptions: {
-          tooltipLabel: "Finder",
+          tooltipLabel: "Home",
           tooltipPosition: 'top',
           positionTop: -15,
           positionLeft: 15
         },
-        icon: "assets/showcase/images/dock/finder.svg",
+        icon: "https://img.icons8.com/stickers/100/000000/home-page.png",
+        routerLink: 'home'
+      },
+      {
+        label: 'Components',
+        tooltipOptions: {
+          tooltipLabel: "Components",
+          tooltipPosition: 'top',
+          positionLeft: 15,
+          positionTop: -15
+        },
+        icon: "https://img.icons8.com/stickers/100/000000/full-tool-storage-box-.png",
         command: () => {
           this.displayFinder = true;
         }
       },
       {
-        label: 'Terminal',
+        label: 'Table CRUD',
         tooltipOptions: {
-          tooltipLabel: "Terminal",
+          tooltipLabel: "Table CRUD",
           tooltipPosition: 'top',
           positionTop: -15,
           positionLeft: 15
         },
-        icon: "assets/showcase/images/dock/terminal.svg",
-        command: () => {
-          this.displayTerminal = true;
-        }
+        icon: "https://img.icons8.com/stickers/100/000000/day-view.png",
+        routerLink: 'table'
       },
       {
-        label: 'App Store',
+        label: 'Themes',
         tooltipOptions: {
-          tooltipLabel: "App Store",
-          tooltipPosition: 'top',
-          positionLeft: 15,
-          positionTop: -15
-        },
-        icon: "assets/showcase/images/dock/appstore.svg"
-      },
-      {
-        label: 'Safari',
-        tooltipOptions: {
-          tooltipLabel: "Safari",
+          tooltipLabel: "Themes",
           tooltipPosition: 'top',
           positionTop: -15,
           positionLeft: 15
         },
-        icon: "assets/showcase/images/dock/safari.svg"
+        icon: "https://img.icons8.com/stickers/100/000000/paint-palette.png",
+        routerLink: 'themes'
       }
     ];
+  }
+
+  getItemsDisplayComponents(): any {
+    return this.menuService.getItemsComponents();
   }
 }
