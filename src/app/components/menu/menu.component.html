@@ -1,12 +1,12 @@
-<p-menubar [model]="items">
+<p-menubar [model]="items" *ngIf="!menuDock">
   <ng-template pTemplate="end">
-    <p-avatar pBadge [value]="'4'" [severity]="'danger'" [image]="'assets/showcase/images/demo/avatar/amyelsner.png'"
-      [style]="{marginTop:'5px', marginRight: '5px', marginBottom: '0px', marginLeft: '0px',
-      paddingTop:'5px', paddingRight: '5px', paddingBottom: '0px', paddingLeft: '0px'}" [size]="'large'"></p-avatar>
+    <p-avatar pFocusTrap pRipple (click)="showPanelProfile()" pBadge [value]="'4'" [style]="{marginTop:'5px', marginRight: '5px', marginBottom: '0px', marginLeft: '0px',
+      paddingTop:'5px', paddingRight: '5px', paddingBottom: '0px', paddingLeft: '0px'}" [severity]="'danger'"
+      [image]="'assets/showcase/images/demo/avatar/medica.jpg'" [size]="'large'"></p-avatar>
   </ng-template>
 </p-menubar>
 
-<div class="dock-window dock-advanced">
+<div class="dock-window dock-advanced" *ngIf="menuDock">
   <p-dock [model]="dockItems" position="left">
     <ng-template pTemplate="item" let-item>
       <img [src]="item.icon" [alt]="item.label" width="100%">
@@ -14,6 +14,40 @@
   </p-dock>
 </div>
 
-<p-dialog header="Components" [transitionOptions]="'130ms'" [(visible)]="displayFinder" [style]="{width: '50vw'}">
+<p-dialog header="Components" [transitionOptions]="'130ms'" [(visible)]="displayFinder" [modal]="true"
+  [style]="{width: '50vw'}" [draggable]="false" [resizable]="false">
   <p-panelMenu [model]="itemsDisplayComponents"></p-panelMenu>
+</p-dialog>
+
+<p-dialog header="Profile" [transitionOptions]="'130ms'" [(visible)]="displayProfile" [modal]="true"
+  [style]="{width: '50vw'}" [draggable]="false" [resizable]="false">
+  <p-card>
+    <ng-template pTemplate="header">
+      <div class="row" style="justify-content: center; align-items: center;">
+        <div class="col-6" style="text-align: center;">
+          <p-image [preview]="true" src="assets/showcase/images/demo/avatar/medica.jpg" alt="Image">
+          </p-image>
+        </div>
+        <div class="col-6" style="padding: 0; text-align: start;">
+          <h5><strong>Nombres:</strong> {{profile.name}}</h5>
+          <h5><strong>Apellidos:</strong> {{profile.lastName}}</h5>
+          <h5><strong>Dirección:</strong> {{profile.address}}</h5>
+          <h5><strong>Teléfono:</strong> {{profile.mobile}}</h5>
+          <h5><strong>Email:</strong> {{profile.email}}</h5>
+        </div>
+      </div>
+    </ng-template>
+    <div class="row" style="justify-content: center; align-items: center;">
+      <div class="col-4" style="text-align: center;">
+        <p-button label="Information" icon="pi pi-exclamation-circle" styleClass="p-button-success"></p-button>
+      </div>
+      <div class="col-4" style="text-align: center;">
+        <p-button label="Files" icon="pi pi-folder" styleClass="p-button-primary"></p-button>
+      </div>
+      <div class="col-4" style="text-align: center;">
+        <p-button label="Messages" icon="pi pi-bell" styleClass="p-button-warning" badge="4"
+          badgeClass="p-badge-danger"></p-button>
+      </div>
+    </div>
+  </p-card>
 </p-dialog>

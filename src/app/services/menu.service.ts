@@ -15,28 +15,7 @@ export class MenuService {
   }
 
   getItemsMenuBar(): any[] {
-    return [
-      {
-        label: 'Home',
-        icon: EnumerableIconsPrimeng.icon.home,
-        routerLink: 'home',
-      },
-      {
-        label: 'Components',
-        icon: EnumerableIconsPrimeng.icon.thLarge,
-        items: this.getItemsComponents()
-      },
-      {
-        label: 'Table CRUD',
-        icon: EnumerableIconsPrimeng.icon.table,
-        routerLink: 'table'
-      },
-      {
-        label: 'Themes',
-        icon: EnumerableIconsPrimeng.icon.palette,
-        routerLink: 'themes'
-      }
-    ];
+    return [];
   }
 
   getItemsComponents() {

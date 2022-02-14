@@ -29,6 +29,10 @@ import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
 import {BadgeModule} from 'primeng/badge';
 import {PanelMenuModule} from 'primeng/panelmenu';
+import {StyleClassModule} from 'primeng/styleclass';
+import {FocusTrapModule} from 'primeng/focustrap';
+import {RippleModule} from 'primeng/ripple';
+import {ImageModule} from 'primeng/image';
 
 @NgModule({
   declarations: [],
@@ -61,7 +65,11 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     AvatarModule,
     AvatarGroupModule,
     BadgeModule,
-    PanelMenuModule
+    PanelMenuModule,
+    StyleClassModule,
+    FocusTrapModule,
+    RippleModule,
+    ImageModule
   ],
   exports: [
     CommonModule,
@@ -92,7 +100,11 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     AvatarModule,
     AvatarGroupModule,
     BadgeModule,
-    PanelMenuModule
+    PanelMenuModule,
+    StyleClassModule,
+    FocusTrapModule,
+    RippleModule,
+    ImageModule
   ]
 })
 export class PrimengModule { }
