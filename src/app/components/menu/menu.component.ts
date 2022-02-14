@@ -15,7 +15,7 @@ export class MenuComponent {
   dockItems: MenuItem[];
   itemsDisplayComponents: MenuItem[];
   displayFinder: boolean = false;
-  displayProfile: boolean = true;
+  displayProfile: boolean = false;
   menuDock = true;
   profile: Profile = new Profile();
 
