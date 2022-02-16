@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrganizationCharComponent } from './organization-char.component';
+import { OrganizationCharComponent } from './organization-char-example.component';
 
 describe('OrganizationCharComponent', () => {
   let component: OrganizationCharComponent;

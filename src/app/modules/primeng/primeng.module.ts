@@ -34,6 +34,7 @@ import {FocusTrapModule} from 'primeng/focustrap';
 import {RippleModule} from 'primeng/ripple';
 import {ImageModule} from 'primeng/image';
 import {OrganizationChartModule} from 'primeng/organizationchart';
+import {PickListModule} from 'primeng/picklist';
 
 @NgModule({
   declarations: [],
@@ -71,7 +72,8 @@ import {OrganizationChartModule} from 'primeng/organizationchart';
     FocusTrapModule,
     RippleModule,
     ImageModule,
-    OrganizationChartModule
+    OrganizationChartModule,
+    PickListModule
   ],
   exports: [
     CommonModule,
@@ -107,7 +109,8 @@ import {OrganizationChartModule} from 'primeng/organizationchart';
     FocusTrapModule,
     RippleModule,
     ImageModule,
-    OrganizationChartModule
+    OrganizationChartModule,
+    PickListModule
   ]
 })
 export class PrimengModule { }

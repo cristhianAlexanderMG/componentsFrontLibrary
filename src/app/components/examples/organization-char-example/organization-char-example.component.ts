@@ -3,11 +3,11 @@ import { TreeNode } from 'primeng/api';
 import { OrganizationCharService } from 'src/app/services/organization-char.service';
 
 @Component({
-  selector: 'app-organization-char',
-  templateUrl: './organization-char.component.html',
-  styleUrls: ['./organization-char.component.scss']
+  selector: 'app-organization-char-example',
+  templateUrl: './organization-char-example.component.html',
+  styleUrls: ['./organization-char-example.component.scss']
 })
-export class OrganizationCharComponent {
+export class OrganizationCharExampleComponent {
   data: TreeNode[];
   selectedNode: TreeNode | null = null;
 

@@ -23,7 +23,8 @@ import { TablePrimengComponent } from './components/shared/table-primeng/table-p
 import { TablePrimengExampleComponent } from './components/examples/table-primeng-example/table-primeng-example.component';
 import { ThemesPrimengExampleComponent } from './components/examples/themes-primeng-example/themes-primeng-example.component';
 import {ThemeService} from "./services/theme.service";
-import { OrganizationCharComponent } from './components/examples/organization-char/organization-char.component';
+import { OrganizationCharExampleComponent } from './components/examples/organization-char-example/organization-char-example.component';
+import { PickListExampleComponent } from './components/examples/pick-list-example/pick-list-example.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { OrganizationCharComponent } from './components/examples/organization-ch
     TablePrimengComponent,
     TablePrimengExampleComponent,
     ThemesPrimengExampleComponent,
-    OrganizationCharComponent
+    OrganizationCharExampleComponent,
+    PickListExampleComponent
   ],
   imports: [
     BrowserModule,

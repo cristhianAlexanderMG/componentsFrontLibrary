@@ -25,6 +25,8 @@ export abstract class EnumerableIconsPrimeng {
     filterSlash: 'pi pi-filter-slash',
     searchPlus: 'pi pi-search-plus',
     searchMinus: 'pi pi-search-minus',
+    windowMinimize: 'pi pi-window-minimize'
+
 
 
 

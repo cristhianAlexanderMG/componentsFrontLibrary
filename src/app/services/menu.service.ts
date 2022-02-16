@@ -49,6 +49,11 @@ export class MenuService {
         label: 'Organization Char',
         icon: EnumerableIconsPrimeng.icon.sitemap,
         routerLink: 'organizationChar'
+      },
+      {
+        label: 'Pick List',
+        icon: EnumerableIconsPrimeng.icon.windowMinimize,
+        routerLink: 'pickList'
       }
     ];
   }

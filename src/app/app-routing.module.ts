@@ -8,7 +8,8 @@ import {WordPrimengExampleComponent} from "./components/examples/word-primeng-ex
 import {CalendarPrimengExampleComponent} from "./components/examples/calendar-primeng-example/calendar-primeng-example.component";
 import {TablePrimengExampleComponent} from "./components/examples/table-primeng-example/table-primeng-example.component";
 import {ThemesPrimengExampleComponent} from "./components/examples/themes-primeng-example/themes-primeng-example.component";
-import { OrganizationCharComponent } from './components/examples/organization-char/organization-char.component';
+import { OrganizationCharExampleComponent } from './components/examples/organization-char-example/organization-char-example.component';
+import { PickListExampleComponent } from './components/examples/pick-list-example/pick-list-example.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'calendar', component: CalendarPrimengExampleComponent },
   { path: 'table', component: TablePrimengExampleComponent },
   { path: 'themes', component: ThemesPrimengExampleComponent },
-  { path: 'organizationChar', component: OrganizationCharComponent },
+  { path: 'organizationChar', component: OrganizationCharExampleComponent },
+  { path: 'pickList', component: PickListExampleComponent },
   { path: '**', component: HomeComponent },
 ];
 
