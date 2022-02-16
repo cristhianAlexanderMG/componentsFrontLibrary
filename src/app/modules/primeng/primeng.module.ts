@@ -33,6 +33,7 @@ import {StyleClassModule} from 'primeng/styleclass';
 import {FocusTrapModule} from 'primeng/focustrap';
 import {RippleModule} from 'primeng/ripple';
 import {ImageModule} from 'primeng/image';
+import {OrganizationChartModule} from 'primeng/organizationchart';
 
 @NgModule({
   declarations: [],
@@ -69,7 +70,8 @@ import {ImageModule} from 'primeng/image';
     StyleClassModule,
     FocusTrapModule,
     RippleModule,
-    ImageModule
+    ImageModule,
+    OrganizationChartModule
   ],
   exports: [
     CommonModule,
@@ -104,7 +106,8 @@ import {ImageModule} from 'primeng/image';
     StyleClassModule,
     FocusTrapModule,
     RippleModule,
-    ImageModule
+    ImageModule,
+    OrganizationChartModule
   ]
 })
 export class PrimengModule { }

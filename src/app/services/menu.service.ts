@@ -44,6 +44,11 @@ export class MenuService {
         label: 'Word',
         icon: EnumerableIconsPrimeng.icon.info,
         routerLink: 'word'
+      },
+      {
+        label: 'Organization Char',
+        icon: EnumerableIconsPrimeng.icon.sitemap,
+        routerLink: 'organizationChar'
       }
     ];
   }

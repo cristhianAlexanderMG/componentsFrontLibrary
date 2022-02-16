@@ -21,6 +21,7 @@ export abstract class EnumerableIconsPrimeng {
     timesMinus: 'pi pi-times-circle',
     refresh: 'pi pi-refresh',
     infoCircle: 'pi pi-info-circle',
+    sitemap: 'pi pi-sitemap',
     filterSlash: 'pi pi-filter-slash',
     searchPlus: 'pi pi-search-plus',
     searchMinus: 'pi pi-search-minus',

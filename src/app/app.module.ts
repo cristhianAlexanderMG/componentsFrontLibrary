@@ -23,6 +23,7 @@ import { TablePrimengComponent } from './components/shared/table-primeng/table-p
 import { TablePrimengExampleComponent } from './components/examples/table-primeng-example/table-primeng-example.component';
 import { ThemesPrimengExampleComponent } from './components/examples/themes-primeng-example/themes-primeng-example.component';
 import {ThemeService} from "./services/theme.service";
+import { OrganizationCharComponent } from './components/examples/organization-char/organization-char.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {ThemeService} from "./services/theme.service";
     CalendarPrimengComponent,
     TablePrimengComponent,
     TablePrimengExampleComponent,
-    ThemesPrimengExampleComponent
+    ThemesPrimengExampleComponent,
+    OrganizationCharComponent
   ],
   imports: [
     BrowserModule,
