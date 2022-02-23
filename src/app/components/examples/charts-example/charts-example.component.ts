@@ -12,12 +12,12 @@ export class ChartsExampleComponent implements OnInit {
   multiAxisBarData: any;
   stackedBarData: any;
 
-  // Data Char Doughnut
-  basicDoughnutData: any;
-
   // Data Char Line
   basicLineData: any;
   multiAxisLineData: any;
+
+  // Data Char Doughnut
+  doughnutData: any;
 
   // Data Char Polar Area
   polarAreaData: any;
@@ -28,8 +28,14 @@ export class ChartsExampleComponent implements OnInit {
   // Data Char Radar
   radarData: any;
 
+  // Data Char Combo
+  comboData: any;
+
   // Option Char Doughnut
-  chartDoughnutOptions: any;
+  basicDoughnutOptions: any;
+
+  // Option Char Combo
+  basicComboOptions: any;
 
   // Option Char Radar
   basicRadarOptions: any;
@@ -64,6 +70,7 @@ export class ChartsExampleComponent implements OnInit {
     this.loadDataChartPolarArea();
     this.loadDataChartPie();
     this.loadDataChartRadar();
+    this.loadDataChartCombo();
     this.changesTheme();
   }
 
@@ -183,7 +190,7 @@ export class ChartsExampleComponent implements OnInit {
   }
 
   loadDataChartDoughnut() {
-    this.basicDoughnutData = {
+    this.doughnutData = {
       labels: ['A', 'B', 'C'],
       datasets: [
         {
@@ -461,6 +468,84 @@ export class ChartsExampleComponent implements OnInit {
       ]
     };
   }
+
+  loadDataChartCombo() {
+    this.comboData = {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [{
+        type: 'line',
+        label: 'Dataset 1',
+        borderColor: '#42A5F5',
+        borderWidth: 2,
+        fill: false,
+        data: [
+          50,
+          25,
+          12,
+          48,
+          56,
+          76,
+          42
+        ]
+      }, {
+        type: 'bar',
+        label: 'Dataset 2',
+        backgroundColor: '#66BB6A',
+        data: [
+          21,
+          84,
+          24,
+          75,
+          37,
+          65,
+          34
+        ],
+        borderColor: 'white',
+        borderWidth: 2
+      }, {
+        type: 'bar',
+        label: 'Dataset 3',
+        backgroundColor: '#FFA726',
+        data: [
+          41,
+          52,
+          24,
+          74,
+          23,
+          21,
+          32
+        ]
+      }]
+    };
+
+    this.basicComboOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#495057'
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#495057'
+          },
+          grid: {
+            color: '#ebedef'
+          }
+        },
+        y: {
+          ticks: {
+            color: '#495057'
+          },
+          grid: {
+            color: '#ebedef'
+          }
+        }
+      }
+    };
+  }
   //#endregion LoadData
 
   //#region Themes
@@ -620,7 +705,7 @@ export class ChartsExampleComponent implements OnInit {
       }
     };
 
-    this.chartDoughnutOptions = {
+    this.basicDoughnutOptions = {
       plugins: {
         legend: {
           labels: {
@@ -746,6 +831,34 @@ export class ChartsExampleComponent implements OnInit {
             color: 'rgba(255,255,255,0.2)',
           },
           angleLines: {
+            color: 'rgba(255,255,255,0.2)'
+          }
+        }
+      }
+    };
+
+    this.basicComboOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ebedef'
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#ebedef'
+          },
+          grid: {
+            color: 'rgba(255,255,255,0.2)'
+          }
+        },
+        y: {
+          ticks: {
+            color: '#ebedef'
+          },
+          grid: {
             color: 'rgba(255,255,255,0.2)'
           }
         }
@@ -896,7 +1009,7 @@ export class ChartsExampleComponent implements OnInit {
       }
     };
 
-    this.chartDoughnutOptions = {
+    this.basicDoughnutOptions = {
       plugins: {
         legend: {
           labels: {
@@ -1022,6 +1135,34 @@ export class ChartsExampleComponent implements OnInit {
             color: '#ebedef',
           },
           angleLines: {
+            color: '#ebedef'
+          }
+        }
+      }
+    };
+
+    this.basicComboOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#495057'
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#495057'
+          },
+          grid: {
+            color: '#ebedef'
+          }
+        },
+        y: {
+          ticks: {
+            color: '#495057'
+          },
+          grid: {
             color: '#ebedef'
           }
         }
