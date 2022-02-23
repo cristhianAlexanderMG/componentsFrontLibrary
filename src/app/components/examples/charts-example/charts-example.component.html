@@ -1,30 +1,45 @@
 <p-card header="Graphics">
     <p-accordion [multiple]="true">
         <p-accordionTab header="Vertical Bar">
-            <app-button-primeng (onClick)="changesTheme()" [label]="'Change Theme'" [rounded]="true">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
             <p-chart type="bar" [data]="basicBarData" [options]="basicBarOptions"></p-chart>
         </p-accordionTab>
         <p-accordionTab header="Horizontal Bar">
-            <app-button-primeng (onClick)="changesTheme()" [label]="'Change Theme'" [rounded]="true">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
             <p-chart type="bar" [data]="basicBarData" [options]="horizontalBarOptions"></p-chart>
         </p-accordionTab>
         <p-accordionTab header="Multi Axis Bar">
-            <app-button-primeng (onClick)="changesTheme()" [label]="'Change Theme'" [rounded]="true">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
             <p-chart type="bar" [data]="multiAxisBarData" [options]="multiAxisBarOptions"></p-chart>
         </p-accordionTab>
         <p-accordionTab header="Stacked Bar">
-            <app-button-primeng (onClick)="changesTheme()" [label]="'Change Theme'" [rounded]="true">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
             <p-chart type="bar" [data]="stackedBarData" [options]="stackedBarOptions"></p-chart>
         </p-accordionTab>
-        <p-accordionTab header="Doughnut">
-            <app-button-primeng (onClick)="changesTheme()" [label]="'Change Theme'" [rounded]="true">
+        <p-accordionTab header="Basic Doughnut">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
             <p-chart type="doughnut" [data]="basicDoughnutData" [options]="chartDoughnutOptions"
                 [style]="{'width': '20%'}"></p-chart>
+        </p-accordionTab>
+        <p-accordionTab header="Basic Line">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
+            </app-button-primeng>
+            <p-chart type="line" [data]="basicLineData" [options]="basicLineOptions"></p-chart>
+        </p-accordionTab>
+        <p-accordionTab header="Multi Axis Line">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
+            </app-button-primeng>
+            <p-chart type="line" [data]="multiAxisLineData" [options]="multiAxisLineOptions"></p-chart>
+        </p-accordionTab>
+        <p-accordionTab header="Line Styles">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
+            </app-button-primeng>
+            <p-chart type="line" [data]="lineStylesData" [options]="basicLineOptions"></p-chart>
         </p-accordionTab>
     </p-accordion>
 </p-card>
