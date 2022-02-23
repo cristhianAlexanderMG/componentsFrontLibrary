@@ -46,5 +46,10 @@
             </app-button-primeng>
             <p-chart type="polarArea" [data]="polarAreaData" [options]="basicPolarAreaOptions" [style]="{'width': '20%'}"></p-chart>
         </p-accordionTab>
+        <p-accordionTab header="Pie">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
+            </app-button-primeng>
+            <p-chart type="pie" [data]="pieData" [options]="basicPieOptions"  [style]="{'width': '20%'}"></p-chart>
+        </p-accordionTab>
     </p-accordion>
 </p-card>

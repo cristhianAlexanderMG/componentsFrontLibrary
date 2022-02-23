@@ -22,8 +22,14 @@ export class ChartsExampleComponent implements OnInit {
   // Data Char Polar Area
   polarAreaData: any;
 
+  // Data Char Pie
+  pieData: any;
+
   // Option Char Doughnut
   chartDoughnutOptions: any;
+
+  // Option Char Pie
+  basicPieOptions: any;
 
   // Option Char Line
   basicLineOptions: any;
@@ -50,9 +56,11 @@ export class ChartsExampleComponent implements OnInit {
     this.loadDataChartLine();
     this.loadDataChartDoughnut();
     this.loadDataChartPolarArea();
+    this.loadDataChartPie();
     this.changesTheme();
   }
 
+  //#region LoadData
   loadDataChartLine() {
     this.basicLineData = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -398,6 +406,29 @@ export class ChartsExampleComponent implements OnInit {
     };
   }
 
+  loadDataChartPie() {
+    this.pieData = {
+      labels: ['A', 'B', 'C'],
+      datasets: [
+        {
+          data: [300, 50, 100],
+          backgroundColor: [
+            "#42A5F5",
+            "#66BB6A",
+            "#FFA726"
+          ],
+          hoverBackgroundColor: [
+            "#64B5F6",
+            "#81C784",
+            "#FFB74D"
+          ]
+        }
+      ]
+    };
+  }
+  //#endregion LoadData
+
+  //#region Themes
   changesTheme() {
     if (this.theme == this.enumTypeTheme.dark) {
       this.applyDarkTheme();
@@ -652,6 +683,16 @@ export class ChartsExampleComponent implements OnInit {
         }
       }
     };
+
+    this.basicPieOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ebedef'
+          }
+        }
+      }
+    };
   }
 
   applyLightTheme() {
@@ -895,5 +936,17 @@ export class ChartsExampleComponent implements OnInit {
         }
       }
     };
+
+    this.basicPieOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#495057'
+          }
+        }
+      }
+    };
   }
+  //#endregion Themes
+
 }
