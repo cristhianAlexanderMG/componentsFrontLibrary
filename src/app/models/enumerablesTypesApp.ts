@@ -64,7 +64,7 @@ export abstract class EnumerablesTypesApp {
   static enumTextDecoration = {
     Normal: "Normal",
     Underline: "Underline",
-    Link : "Link",
+    Link: "Link",
   }
 
   static enumTypeColumnTable = {
@@ -77,5 +77,10 @@ export abstract class EnumerablesTypesApp {
     success: "200",
     error: "500",
     notFound: "400"
+  }
+
+  static enumTypeTheme = {
+    dark: "Dark",
+    light: "Light"
   }
 }
