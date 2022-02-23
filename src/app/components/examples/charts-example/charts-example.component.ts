@@ -19,6 +19,9 @@ export class ChartsExampleComponent implements OnInit {
   basicLineData: any;
   multiAxisLineData: any;
 
+  // Data Char Polar Area
+  polarAreaData: any;
+
   // Option Char Doughnut
   chartDoughnutOptions: any;
 
@@ -33,6 +36,9 @@ export class ChartsExampleComponent implements OnInit {
   multiAxisBarOptions: any;
   stackedBarOptions: any;
 
+  // Option Char Polar Area
+  basicPolarAreaOptions: any;
+
   // Others
   enumSize = EnumerablesTypesApp.enumSize;
   enumTypeTheme = EnumerablesTypesApp.enumTypeTheme;
@@ -43,6 +49,7 @@ export class ChartsExampleComponent implements OnInit {
     this.loadDataChartBar();
     this.loadDataChartLine();
     this.loadDataChartDoughnut();
+    this.loadDataChartPolarArea();
     this.changesTheme();
   }
 
@@ -362,6 +369,35 @@ export class ChartsExampleComponent implements OnInit {
     };
   }
 
+  loadDataChartPolarArea() {
+    this.polarAreaData = {
+      datasets: [{
+        data: [
+          11,
+          16,
+          7,
+          3,
+          14
+        ],
+        backgroundColor: [
+          "#42A5F5",
+          "#66BB6A",
+          "#FFA726",
+          "#26C6DA",
+          "#7E57C2"
+        ],
+        label: 'My dataset'
+      }],
+      labels: [
+        "Red",
+        "Green",
+        "Yellow",
+        "Grey",
+        "Blue"
+      ]
+    };
+  }
+
   changesTheme() {
     if (this.theme == this.enumTypeTheme.dark) {
       this.applyDarkTheme();
@@ -599,6 +635,23 @@ export class ChartsExampleComponent implements OnInit {
         }
       }
     };
+
+    this.basicPolarAreaOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ebedef'
+          }
+        }
+      },
+      scales: {
+        r: {
+          grid: {
+            color: 'rgba(255,255,255,0.2)'
+          }
+        }
+      }
+    };
   }
 
   applyLightTheme() {
@@ -820,6 +873,23 @@ export class ChartsExampleComponent implements OnInit {
           },
           grid: {
             drawOnChartArea: false,
+            color: '#ebedef'
+          }
+        }
+      }
+    };
+
+    this.basicPolarAreaOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#495057'
+          }
+        }
+      },
+      scales: {
+        r: {
+          grid: {
             color: '#ebedef'
           }
         }
