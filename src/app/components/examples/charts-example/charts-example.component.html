@@ -20,12 +20,6 @@
             </app-button-primeng>
             <p-chart type="bar" [data]="stackedBarData" [options]="stackedBarOptions"></p-chart>
         </p-accordionTab>
-        <p-accordionTab header="Basic Doughnut">
-            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
-            </app-button-primeng>
-            <p-chart type="doughnut" [data]="basicDoughnutData" [options]="chartDoughnutOptions"
-                [style]="{'width': '20%'}"></p-chart>
-        </p-accordionTab>
         <p-accordionTab header="Basic Line">
             <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
@@ -36,20 +30,32 @@
             </app-button-primeng>
             <p-chart type="line" [data]="multiAxisLineData" [options]="multiAxisLineOptions"></p-chart>
         </p-accordionTab>
-        <p-accordionTab header="Line Styles">
+        <p-accordionTab header="Styles Line">
             <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
             <p-chart type="line" [data]="lineStylesData" [options]="basicLineOptions"></p-chart>
         </p-accordionTab>
+        <p-accordionTab header="Doughnut">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
+            </app-button-primeng>
+            <p-chart type="doughnut" [data]="basicDoughnutData" [options]="chartDoughnutOptions"
+                [style]="{'width': '20%'}"></p-chart>
+        </p-accordionTab>
         <p-accordionTab header="Polar Area">
             <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
-            <p-chart type="polarArea" [data]="polarAreaData" [options]="basicPolarAreaOptions" [style]="{'width': '20%'}"></p-chart>
+            <p-chart type="polarArea" [data]="polarAreaData" [options]="basicPolarAreaOptions"
+                [style]="{'width': '20%'}"></p-chart>
         </p-accordionTab>
         <p-accordionTab header="Pie">
             <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
             </app-button-primeng>
-            <p-chart type="pie" [data]="pieData" [options]="basicPieOptions"  [style]="{'width': '20%'}"></p-chart>
+            <p-chart type="pie" [data]="pieData" [options]="basicPieOptions" [style]="{'width': '20%'}"></p-chart>
+        </p-accordionTab>
+        <p-accordionTab header="Radar">
+            <app-button-primeng (onClick)="changesTheme()" [label]="labelButtonTheme" [rounded]="true">
+            </app-button-primeng>
+            <p-chart type="radar" [data]="radarData" [options]="basicRadarOptions" [style]="{'width': '20%'}"></p-chart>
         </p-accordionTab>
     </p-accordion>
 </p-card>

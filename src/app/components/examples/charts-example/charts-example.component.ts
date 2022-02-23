@@ -25,8 +25,14 @@ export class ChartsExampleComponent implements OnInit {
   // Data Char Pie
   pieData: any;
 
+  // Data Char Radar
+  radarData: any;
+
   // Option Char Doughnut
   chartDoughnutOptions: any;
+
+  // Option Char Radar
+  basicRadarOptions: any;
 
   // Option Char Pie
   basicPieOptions: any;
@@ -57,6 +63,7 @@ export class ChartsExampleComponent implements OnInit {
     this.loadDataChartDoughnut();
     this.loadDataChartPolarArea();
     this.loadDataChartPie();
+    this.loadDataChartRadar();
     this.changesTheme();
   }
 
@@ -426,6 +433,34 @@ export class ChartsExampleComponent implements OnInit {
       ]
     };
   }
+
+  loadDataChartRadar() {
+    this.radarData = {
+      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+      datasets: [
+        {
+          label: 'My First dataset',
+          backgroundColor: 'rgba(179,181,198,0.2)',
+          borderColor: 'rgba(179,181,198,1)',
+          pointBackgroundColor: 'rgba(179,181,198,1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(179,181,198,1)',
+          data: [65, 59, 90, 81, 56, 55, 40]
+        },
+        {
+          label: 'My Second dataset',
+          backgroundColor: 'rgba(255,99,132,0.2)',
+          borderColor: 'rgba(255,99,132,1)',
+          pointBackgroundColor: 'rgba(255,99,132,1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(255,99,132,1)',
+          data: [28, 48, 40, 19, 96, 27, 100]
+        }
+      ]
+    };
+  }
   //#endregion LoadData
 
   //#region Themes
@@ -693,6 +728,29 @@ export class ChartsExampleComponent implements OnInit {
         }
       }
     };
+
+    this.basicRadarOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ebedef'
+          }
+        }
+      },
+      scales: {
+        r: {
+          pointLabels: {
+            color: '#ebedef',
+          },
+          grid: {
+            color: 'rgba(255,255,255,0.2)',
+          },
+          angleLines: {
+            color: 'rgba(255,255,255,0.2)'
+          }
+        }
+      }
+    };
   }
 
   applyLightTheme() {
@@ -942,6 +1000,29 @@ export class ChartsExampleComponent implements OnInit {
         legend: {
           labels: {
             color: '#495057'
+          }
+        }
+      }
+    };
+
+    this.basicRadarOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#495057'
+          }
+        }
+      },
+      scales: {
+        r: {
+          pointLabels: {
+            color: '#495057',
+          },
+          grid: {
+            color: '#ebedef',
+          },
+          angleLines: {
+            color: '#ebedef'
           }
         }
       }
