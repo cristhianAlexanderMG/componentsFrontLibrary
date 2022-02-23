@@ -25,6 +25,7 @@ import { ThemesPrimengExampleComponent } from './components/examples/themes-prim
 import {ThemeService} from "./services/theme.service";
 import { OrganizationCharExampleComponent } from './components/examples/organization-char-example/organization-char-example.component';
 import { PickListExampleComponent } from './components/examples/pick-list-example/pick-list-example.component';
+import { ProgressBarExampleComponent } from './components/examples/progress-bar-example/progress-bar-example.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PickListExampleComponent } from './components/examples/pick-list-exampl
     TablePrimengExampleComponent,
     ThemesPrimengExampleComponent,
     OrganizationCharExampleComponent,
-    PickListExampleComponent
+    PickListExampleComponent,
+    ProgressBarExampleComponent
   ],
   imports: [
     BrowserModule,

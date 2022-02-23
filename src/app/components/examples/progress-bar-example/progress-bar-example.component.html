@@ -1,0 +1,13 @@
+<p-card header="Progress Bar">
+    <p-accordion [multiple]="true">
+        <p-accordionTab header="Static">
+            <p-progressBar [value]="value" [showValue]="false"></p-progressBar>
+        </p-accordionTab>
+        <p-accordionTab header="Dynamic">
+            <p-progressBar [value]="valueDynamic"></p-progressBar>
+        </p-accordionTab>
+        <p-accordionTab header="Indeterminate">
+            <p-progressBar mode="indeterminate" [style]="{'height': '6px'}"></p-progressBar>
+        </p-accordionTab>
+    </p-accordion>
+</p-card>

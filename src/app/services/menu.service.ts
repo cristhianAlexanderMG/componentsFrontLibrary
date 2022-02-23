@@ -54,6 +54,11 @@ export class MenuService {
         label: 'Pick List',
         icon: EnumerableIconsPrimeng.icon.windowMinimize,
         routerLink: 'pickList'
+      },
+      {
+        label: 'Progress Bar',
+        icon: EnumerableIconsPrimeng.icon.spinner,
+        routerLink: 'progressBar'
       }
     ];
   }
