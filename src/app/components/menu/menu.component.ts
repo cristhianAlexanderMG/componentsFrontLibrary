@@ -45,6 +45,11 @@ export class MenuComponent {
         routerLink: 'table'
       },
       {
+        label: 'Graphics',
+        icon: EnumerableIconsPrimeng.icon.chartLine,
+        routerLink: 'graphics'
+      },
+      {
         label: 'Themes',
         icon: EnumerableIconsPrimeng.icon.palette,
         routerLink: 'themes'
@@ -108,6 +113,18 @@ export class MenuComponent {
         },
         icon: "https://img.icons8.com/stickers/100/000000/day-view.png",
         routerLink: 'table'
+      },
+      {
+        label: 'Graphics',
+        tooltipOptions: {
+          tooltipLabel: "Graphics",
+          tooltipPosition: 'top',
+          positionTop: -15,
+          positionLeft: 15
+        },
+        
+        icon: "https://img.icons8.com/stickers/100/000000/statistics.png",
+        routerLink: 'graphics'
       },
       {
         label: 'Themes',

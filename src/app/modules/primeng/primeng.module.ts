@@ -36,6 +36,7 @@ import {ImageModule} from 'primeng/image';
 import {OrganizationChartModule} from 'primeng/organizationchart';
 import {PickListModule} from 'primeng/picklist';
 import {ProgressBarModule} from 'primeng/progressbar';
+import {ChartModule} from 'primeng/chart';
 
 @NgModule({
   declarations: [],
@@ -75,7 +76,8 @@ import {ProgressBarModule} from 'primeng/progressbar';
     ImageModule,
     OrganizationChartModule,
     PickListModule,
-    ProgressBarModule
+    ProgressBarModule,
+    ChartModule
   ],
   exports: [
     CommonModule,
@@ -113,7 +115,8 @@ import {ProgressBarModule} from 'primeng/progressbar';
     ImageModule,
     OrganizationChartModule,
     PickListModule,
-    ProgressBarModule
+    ProgressBarModule,
+    ChartModule
   ]
 })
 export class PrimengModule { }

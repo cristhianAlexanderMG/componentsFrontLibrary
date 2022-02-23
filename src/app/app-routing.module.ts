@@ -11,6 +11,7 @@ import {ThemesPrimengExampleComponent} from "./components/examples/themes-primen
 import { OrganizationCharExampleComponent } from './components/examples/organization-char-example/organization-char-example.component';
 import { PickListExampleComponent } from './components/examples/pick-list-example/pick-list-example.component';
 import { ProgressBarExampleComponent } from './components/examples/progress-bar-example/progress-bar-example.component';
+import { ChartsExampleComponent } from './components/examples/charts-example/charts-example.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'organizationChar', component: OrganizationCharExampleComponent },
   { path: 'pickList', component: PickListExampleComponent },
   { path: 'progressBar', component: ProgressBarExampleComponent },
+  { path: 'graphics', component: ChartsExampleComponent },
   { path: '**', component: HomeComponent },
 ];
 

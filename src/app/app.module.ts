@@ -26,6 +26,7 @@ import {ThemeService} from "./services/theme.service";
 import { OrganizationCharExampleComponent } from './components/examples/organization-char-example/organization-char-example.component';
 import { PickListExampleComponent } from './components/examples/pick-list-example/pick-list-example.component';
 import { ProgressBarExampleComponent } from './components/examples/progress-bar-example/progress-bar-example.component';
+import { ChartsExampleComponent } from './components/examples/charts-example/charts-example.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ProgressBarExampleComponent } from './components/examples/progress-bar-
     ThemesPrimengExampleComponent,
     OrganizationCharExampleComponent,
     PickListExampleComponent,
-    ProgressBarExampleComponent
+    ProgressBarExampleComponent,
+    ChartsExampleComponent
   ],
   imports: [
     BrowserModule,
