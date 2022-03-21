@@ -12,6 +12,7 @@ import { OrganizationCharExampleComponent } from './components/examples/organiza
 import { PickListExampleComponent } from './components/examples/pick-list-example/pick-list-example.component';
 import { ProgressBarExampleComponent } from './components/examples/progress-bar-example/progress-bar-example.component';
 import { ChartsExampleComponent } from './components/examples/charts-example/charts-example.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'pickList', component: PickListExampleComponent },
   { path: 'progressBar', component: ProgressBarExampleComponent },
   { path: 'graphics', component: ChartsExampleComponent },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: HomeComponent },
 ];
 

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {ResponseData} from "../models/responseData";
 import {EnumerablesTypesApp} from "../models/enumerablesTypesApp";
 import {ColumnTable} from "../models/columnTable";
+import { MessageModel } from '../models/messageModel';
 
 @Injectable({
   providedIn: 'root'
@@ -100,7 +101,8 @@ export class UtilsService {
           name: 'Type 22'
         },
       ],
-      status: EnumerablesTypesApp.enumStatusResponseData.success
+      status: EnumerablesTypesApp.enumStatusResponseData.success,
+      message: new MessageModel()
     };
   }
 

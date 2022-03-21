@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <p-card styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p-image src="https://img.icons8.com/stickers/100/000000/key.png" alt="Login Image"
+                                width="10%" height="10%"></p-image>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <app-input-primeng [label]="dataUser.label" [type]="dataUser.type"
+                                    [value]="dataUser.value" [required]="dataUser.required"
+                                    [disabled]="dataUser.disabled" [labelTooltip]="dataUser.tooltip"
+                                    (returnValue)="dataUser.value = $event; validations();">
+                                </app-input-primeng>
+                                <app-input-primeng [label]="dataPassword.label" [type]="dataPassword.type"
+                                    [value]="dataPassword.value" [required]="dataPassword.required"
+                                    [disabled]="dataPassword.disabled" [labelTooltip]="dataPassword.tooltip"
+                                    (returnValue)="dataPassword.value = $event; validations();">
+                                </app-input-primeng>
+                                <div class="text-center">
+                                    <app-button-primeng [typeSeverityButton]="enumSeverity.Success"
+                                        [label]="labelButton" (onClick)="login()" [size]="enumSize.Small"
+                                        [loading]="loadingButton" [disabled]="disabledButton">
+                                    </app-button-primeng>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+</div>

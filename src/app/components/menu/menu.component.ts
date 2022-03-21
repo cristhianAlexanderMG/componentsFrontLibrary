@@ -35,6 +35,11 @@ export class MenuComponent {
         routerLink: 'home',
       },
       {
+        label: 'Login',
+        icon: EnumerableIconsPrimeng.icon.key,
+        routerLink: 'login'
+      },
+      {
         label: 'Components',
         icon: EnumerableIconsPrimeng.icon.thLarge,
         items: this.menuService.getItemsComponents()
@@ -89,6 +94,17 @@ export class MenuComponent {
         },
         icon: "https://img.icons8.com/stickers/100/000000/home-page.png",
         routerLink: 'home'
+      },
+      {
+        label: 'Login',
+        tooltipOptions: {
+          tooltipLabel: "Login",
+          tooltipPosition: 'top',
+          positionTop: -15,
+          positionLeft: 15
+        },
+        icon: "https://img.icons8.com/stickers/100/000000/password-window.png",
+        routerLink: 'login'
       },
       {
         label: 'Components',

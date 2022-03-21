@@ -1,0 +1,27 @@
+<p-card header="{{titleCard}}" subheader="{{ withSubtitle ? subtitleCard : ''}}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header" *ngIf="withImageHeader">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center align-items-center">
+                <p-image src="{{routeImageHeader}}" alt="Image Header Card" width="{{widthImage}}"
+                    height="{{heightImage}}"></p-image>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <div class="container-fluid">
+            
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer" *ngIf="withFooter">
+        <div class="row">
+            <div class="col text-end">
+                <app-button-primeng [typeSeverityButton]="enumSeverity.Success" [label]="labelButtonConfirm"
+                    [size]="enumSize.Small" [loading]="loadingButtonSuccess" [disabled]="disabledButtonSuccess"
+                    (onClick)="clickSuccess($event)"></app-button-primeng>
+                <app-button-primeng [typeSeverityButton]="enumSeverity.Danger" [label]="labelButtonCancel"
+                    [size]="enumSize.Small" [loading]="loadingButtonSuccess" [disabled]="disabledButtonSuccess"
+                    (onClick)="clickCancel($event)"></app-button-primeng>
+            </div>
+        </div>
+    </ng-template>
+</p-card>

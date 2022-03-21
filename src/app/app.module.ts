@@ -27,6 +27,8 @@ import { OrganizationCharExampleComponent } from './components/examples/organiza
 import { PickListExampleComponent } from './components/examples/pick-list-example/pick-list-example.component';
 import { ProgressBarExampleComponent } from './components/examples/progress-bar-example/progress-bar-example.component';
 import { ChartsExampleComponent } from './components/examples/charts-example/charts-example.component';
+import { LoginComponent } from './components/login/login.component';
+import { CardPrimengComponent } from './components/shared/card-primeng/card-primeng.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ChartsExampleComponent } from './components/examples/charts-example/cha
     OrganizationCharExampleComponent,
     PickListExampleComponent,
     ProgressBarExampleComponent,
-    ChartsExampleComponent
+    ChartsExampleComponent,
+    LoginComponent,
+    CardPrimengComponent
   ],
   imports: [
     BrowserModule,

@@ -27,6 +27,7 @@ export abstract class EnumerableIconsPrimeng {
     searchMinus: 'pi pi-search-minus',
     windowMinimize: 'pi pi-window-minimize',
     chartLine: 'pi pi-chart-line',
-    spinner: 'pi pi-spinner'
+    spinner: 'pi pi-spinner',
+    key: 'pi pi-key'
   }
 }
