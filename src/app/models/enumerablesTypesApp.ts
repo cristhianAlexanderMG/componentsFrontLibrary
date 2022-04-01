@@ -9,6 +9,11 @@ export abstract class EnumerablesTypesApp {
     Danger: "Danger",
   }
 
+  static enumStatusLogin = {
+    active: "active",
+    inactive: "inactive"
+  }
+
   static enumTypeData = {
     number: "number",
     string: "string",

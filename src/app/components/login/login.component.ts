@@ -47,11 +47,9 @@ export class LoginComponent {
     this.loginService.login(this.dataUser.value, this.dataPassword.value)
       .then((x: ResponseData) => {
         this.messageService.showMessage(x.message);
-        this.changeStatusToFields(!(x.status == this.enumStatusResponseData.success))
+        this.changeStatusToFields(!(x.status == this.enumStatusResponseData.success));
       })
-      .catch(x => {
-        this.changeStatusToFields(false)
-      });
+      .catch(x => this.changeStatusToFields(false));
   }
 
   validations() {
